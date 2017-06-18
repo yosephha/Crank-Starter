@@ -37,7 +37,7 @@ Crank Starter is a web application inspired by Kick Starter, a crowd-funding web
 
 **Objective:** Projects can be created, viewed, edited, and destroyed through the API.
 
-### Phase 3: Backing projects & rewards (1.5 days)
+### Phase 3: Backing projects & rewards (2 days)
 
 **Objective:** Users can back projects and receive rewards. Each pledge will increment the project's total funds raised.
 
