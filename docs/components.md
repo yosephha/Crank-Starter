@@ -2,15 +2,15 @@
 
 - Auth Component
 - nav-bar
-  + Search Component
+- [] Search Component
 -  Splash Component
 -  New project Component
 -  Categories Component
 -  Project Index Component
-  + Project Item Component
+- [] Project Item Component
 -  Show Project Component
-  + Project Stats Component
-  + Edit Project Component
+- [] Project Stats Component
+- [] Edit Project Component
 
 ## Routes
 
