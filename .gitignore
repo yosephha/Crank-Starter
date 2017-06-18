@@ -1,0 +1,15 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+.byebug_history
+node_modules/
+bundle.js
+bundle.js.map
+.DS_Store
+npm-debug.log
