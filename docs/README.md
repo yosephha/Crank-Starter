@@ -22,10 +22,10 @@ Crank Starter is a web application inspired by Kick Starter, a crowd-funding web
 * [Sample State][sample-state]
 
 [wireframes]: wireframes
-[components]: component-hierarchy.md
+[components]: components.md
 [sample-state]: sample-state.md
 [api-endpoints]: api-endpoints.md
-[schema]: schema.md
+[schema]: sample-schema.md
 
 ## Implementation Timeline
 
