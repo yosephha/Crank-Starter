@@ -30,7 +30,7 @@ Loads React web app
 
 - `GET /api/projects/:projectId/rewards`
 - `POST /api/projects/:projectId/rewards`
-- `DELETE /api/projects/:projectId/rewards/:rewardId`
+- `DELETE /api/projects/:projectId`
 
 ### contributions
 
@@ -40,4 +40,3 @@ Loads React web app
 
 - `GET /api/categories`
 - `GET /api/categories/:categoryId`
-- `GET /api/categories/:categoryId/projects`

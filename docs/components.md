@@ -20,7 +20,7 @@
 | "/log-in"                   | "Auth Component"              |
 | "/"                         | "Home"                        |
 | "/project/:projectId"       | "Show Project Component"      |
-| "/project/edit/:projectId"  | "Edit Project Component"      |
+| "/project/:projectId/edit"  | "Edit Project Component"      |
 | "/categories"               | "Categories Component"        |
 | "/search"                   | "Search Component"            |
 | "/project/new"	            | "New project Component"       |

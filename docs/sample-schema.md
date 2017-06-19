@@ -15,8 +15,7 @@ id                 | integer   | not null, primary key
 title              | string    | not null
 website            | string    | optional
 description        | text      | not null
-image_url          | string    | optional
-end_date           | string    | not null
+end_date           | Date      | not null
 funding_goal       | integer   | not null
 details            | text      | optional
 creator_id         | integer   | not null, foreign key (references users), indexed
@@ -26,7 +25,6 @@ column name  | data type | details
 -------------|-----------|-----------------------
 id           | integer   | not null, primary key
 project_id   | integer   | not null, foreign key (references projects), indexed
-receiver_id  | integer   | not null, foreign key (references projects), indexed
 title        | string    | not null
 amount       | integer   | not null
 description  | text      | not null
