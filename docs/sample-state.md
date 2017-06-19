@@ -13,25 +13,46 @@
     input: []
   }
 
-  project: {
+  projects: {
     1: {
       id: 1,
       title: "....",
-      main_image_url: "....",        
+      website: "...",
+      image_url: "....",        
       description: "....",
-      owner_id: 2,
+      end_date: "....",
+      funding_goal: "....",
+      details: "...."
+      creator_id: 2,
       category_id: 1
     },
 
     2: {
       id: 1,
       title: "....",
-      main_image_url: "....",        
+      website: "...",
+      image_url: "....",        
       description: "....",
-      owner_id: 3,
-      category_id: 2
+      end_date: "....",
+      funding_goal: "....",
+      details: "...."
+      creator_id: 3,
+      category_id: 5
+      rewards: {
+        1:{
+          receiver_id: 5
+          title: "....",        
+          amount: "....",      
+          description: "...."   
+        }
+        2:{
+          receiver_id: 5
+          title: "....",        
+          amount: "....",      
+          description: "...."   
+        }
+      }
     }
-
   }
 }
 ```
