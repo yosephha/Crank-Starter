@@ -1,0 +1,83 @@
+html, body, header, nav, h1, a,
+ul, li, button, i, section, img,
+div, form, input, textarea, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+.authFormDiv{
+  background: red;
+  width: 31%;
+  margin: auto;
+  height: 480px;
+}
+
+.authFormContainer{
+  background: #e6e6e6;
+  position: relative;
+  top: 60px;
+}
+
+.authForm{
+  background: white;
+  margin: 5px;
+  width: 33%;
+  margin: auto;
+  height: 430px;
+  border: 1px solid #d2d2d2;
+  display: block;
+}
+
+.redirect{
+  border: 1px solid #e7e7e7;
+  margin: auto;
+  text-align: center;
+  width: 33%;
+  padding: 28px 0;
+  background: white;
+}
+
+.authFormInputs{
+  // background: blue;
+  // margin: 10px;
+}
+
+input[type=text], input[type=password]{
+  width: 80%;
+  padding: 12px 20px;
+  background: white;
+  margin: 11px;
+  border-radius: 7px;
+  border: 1px solid grey;
+}
+
+.formType{
+  padding-left: 12px;
+  padding-top: 12px;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.loginDiv{
+  // background: orange;
+  text-align: center;
+  padding: 10px;
+}
+.login{
+  background: #3fe53f;
+  display: box;
+  width: 93%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 21px;
+}

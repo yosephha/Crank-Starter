@@ -8,7 +8,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack"
+  },
+  "engines": {
+    "node": "7.10.0",
+    "npm": "2.1.x"
   },
   "repository": {
     "type": "git",

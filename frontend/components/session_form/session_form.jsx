@@ -27,7 +27,26 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
-		this.props.processForm({user});
+		this.props.processForm({user})
+		.then(res => this.props.history.push('/'));
+	}
+
+	navLink() {
+		if (this.props.formType === 'login') {
+			return (
+				<div>
+					<span>New to Clickstarter?</span>&nbsp;&nbsp;
+					<span onClick={this.props.clearErrors}><Link to="/signup">Sign up!</Link></span>
+				</div>
+			);
+		} else {
+			return (
+				<div>
+					<span>Have an account?</span>&nbsp;&nbsp;
+					<span onClick={this.props.clearErrors}><Link to="/login">Log in</Link></span>
+				</div>
+			);
+		}
 	}
 
 	renderErrors() {
@@ -43,29 +62,47 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
+		let formType;
+		(this.props.formType === 'login') ? formType = 'Log in' : formType = 'Sign Up'
+
 		return (
-				<form onSubmit={this.handleSubmit}>
+			<div className="authFormContainer">
+				<form onSubmit={this.handleSubmit} className ="authForm">
+					<h1 className="formType">
+						{formType}
+					</h1>
+
 					<br/>
-					{this.renderErrors()}
+						{this.renderErrors()}
 					<div>
 						<br/>
-						<label> Username:
+						<div className ="authFormInputs">
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
-							/>
-						</label>
-						<br/>
-						<label> Password:
+								placeholder="Username"
+								/>
+							<br/>
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
-							/>
-						</label>
-						<br/>
-						<input type="submit" value="Submit" />
+								placeholder="Password"
+								/>
+							<br/>
+							<div className="loginDiv">
+								<input type="submit"
+									value="Log me in!"
+									className="login"
+						  />
+							</div>
+						</div>
 					</div>
 				</form>
+
+				<div className="redirect">
+					{this.navLink()}
+				</div>
+			</div>
 		);
 	}
 

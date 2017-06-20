@@ -8,13 +8,14 @@ import NavBar from './nav_bar/nav_bar_container';
 
 const App = () => (
   <div>
-    <header>
+    <header className="header">
       <h1>Crank Starter</h1>
       <NavBar />
     </header>
-
-    <AuthRoute exact path="/login" component={FormContainer} />
-    <AuthRoute exact path="/signup" component={FormContainer} />
+      <div className="mainPage">
+        <AuthRoute exact path="/login" component={FormContainer} />
+        <AuthRoute exact path="/signup" component={FormContainer} />
+      </div>
   </div>
 );
 
