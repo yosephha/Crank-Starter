@@ -51,7 +51,8 @@ div, form, input, textarea, span {
   width: 360px;
   padding: 20px 0;
   background: white;
-  border-top: 1px solid #F1EEEA;
+  border-top: 1px solid #b3b0ad;
+  border-bottom: 1px solid #b3b0ad;
   font-size: 14px;
   color: #3D3D66;
 }
@@ -68,6 +69,12 @@ input[type=text], input[type=password]{
   margin: 11px;
   border-radius: 7px;
   border: 1px solid grey;
+
+}
+
+input:focus {
+  border: 1px solid black;
+
 }
 
 .formType{

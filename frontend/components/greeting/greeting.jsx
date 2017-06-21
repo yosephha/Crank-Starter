@@ -9,10 +9,10 @@ const sessionLinks = (clearErrors) => (
 );
 
 const personalGreeting = (currentUser, logout) => (
-	<hgroup className="header-group">
-    <h2 className="header-name">{currentUser.username}!</h2>
+  <div className="loggedIn-icon">
+    <Link to="/">{currentUser.username}!</Link>
     <button className="header-button" onClick={logout}>Log Out</button>
-	</hgroup>
+  </div>
 );
 
 const Greeting = ({ currentUser, logout, clearErrors }) => (

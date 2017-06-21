@@ -1,8 +1,8 @@
-.login-signup {
+.login-signup, .loggedIn-icon {
   display: flex;
 }
 
-.login-signup a {
+.login-signup a, .loggedIn-icon a, button {
   display: block;
   padding-left: 32px;
 }
