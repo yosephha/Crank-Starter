@@ -21,6 +21,12 @@ div, form, input, textarea, span {
   height: 480px;
 }
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .authFormContainer{
   background: #e6e6e6;
   position: relative;
@@ -30,30 +36,32 @@ div, form, input, textarea, span {
 .authForm{
   background: white;
   margin: 5px;
-  width: 33%;
+  width: 360px;
   margin: auto;
   height: 430px;
   border: 1px solid #d2d2d2;
-  display: block;
+  display: flex;
+  position: relative;
 }
 
 .redirect{
-  border: 1px solid #e7e7e7;
   margin: auto;
   text-align: center;
-  width: 33%;
-  padding: 28px 0;
+  width: 360px;
+  padding: 20px 0;
   background: white;
+  border-top: 1px solid #F1EEEA;
+  font-size: 14px;
+  color: #3D3D66;
 }
 
 .authFormInputs{
-  // background: blue;
-  // margin: 10px;
+  text-align: center;
 }
 
 input[type=text], input[type=password]{
   width: 80%;
-  padding: 12px 20px;
+  padding: 12px 25px;
   background: white;
   margin: 11px;
   border-radius: 7px;
@@ -69,15 +77,28 @@ input[type=text], input[type=password]{
 }
 
 .loginDiv{
-  // background: orange;
   text-align: center;
   padding: 10px;
 }
+
 .login{
-  background: #3fe53f;
+  background: #25CB68;
   display: box;
-  width: 93%;
-  padding: 10px;
+  width: 80%;
+  padding: 9px 34px;
   border-radius: 10px;
   margin-top: 21px;
+  margin-bottom: 80px;
+}
+
+.errors{
+  color: red;
+  list-style: none;
+  font-family: monospace;
+  font-size: small;
+}
+
+.link-form{
+  color: blue;
+  font-size: large;
 }

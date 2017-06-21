@@ -36,14 +36,22 @@ class SessionForm extends React.Component {
 			return (
 				<div>
 					<span>New to Clickstarter?</span>&nbsp;&nbsp;
-					<span onClick={this.props.clearErrors}><Link to="/signup">Sign up!</Link></span>
+					<span onClick={this.props.clearErrors}><Link to="/signup"
+							className="link-form">
+							Sign up!
+						</Link>
+					</span>
 				</div>
 			);
 		} else {
 			return (
 				<div>
 					<span>Have an account?</span>&nbsp;&nbsp;
-					<span onClick={this.props.clearErrors}><Link to="/login">Log in</Link></span>
+					<span onClick={this.props.clearErrors}><Link to="/login"
+							className="link-form">
+							Log in!
+						</Link>
+					</span>
 				</div>
 			);
 		}
@@ -51,7 +59,7 @@ class SessionForm extends React.Component {
 
 	renderErrors() {
 		return(
-			<ul>
+			<ul className="errors">
 				{this.props.errors.map((error, i) => (
 					<li key={`error-${i}`}>
 						{error}
@@ -62,21 +70,27 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
-		let formType;
-		(this.props.formType === 'login') ? formType = 'Log in' : formType = 'Sign Up'
+		let formType, buttonType;
+		if (this.props.formType === 'login'){
+			formType = 'Log in';
+			buttonType = 'Log me in!'
+ 		} else{
+			formType = 'Sign Up';
+			buttonType = 'Create account';
+		}
+
 
 		return (
-			<div className="authFormContainer">
+			<div className="authFormContainer group">
 				<form onSubmit={this.handleSubmit} className ="authForm">
-					<h1 className="formType">
-						{formType}
-					</h1>
-
-					<br/>
-						{this.renderErrors()}
-					<div>
+					<div className ="authFormInputs">
+						<h1 className="formType">
+							{formType}
+						</h1>
 						<br/>
-						<div className ="authFormInputs">
+						{this.renderErrors()}
+						<div>
+							<br/>
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
@@ -91,17 +105,17 @@ class SessionForm extends React.Component {
 							<br/>
 							<div className="loginDiv">
 								<input type="submit"
-									value="Log me in!"
+									value={buttonType}
 									className="login"
 						  />
 							</div>
 						</div>
+						<div className="redirect">
+							{this.navLink()}
+						</div>
 					</div>
 				</form>
 
-				<div className="redirect">
-					{this.navLink()}
-				</div>
 			</div>
 		);
 	}
