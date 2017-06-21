@@ -1,0 +1,55 @@
+.nav-bar-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-nav-bar, .right-nav-bar{
+  display: flex;
+}
+
+.crank {
+  color: green;
+}
+
+.nav-bar-logo {
+  background: lightblue;
+  margin: 4px;
+}
+
+// .nav-bar-explore{
+//   background: lightblue;
+//   margin: 4px;
+// }
+//
+// .nav-bar-startProject{
+//   background: lightblue;
+//   margin: 4px;
+// }
+//
+// .nav-bar-aboutUs {
+//   background: lightblue;
+//   margin: 4px;
+// }
+//
+// .nav-bar-logo {
+//   background: lightblue;
+//   margin: 4px;
+// }
+//
+// .nav-bar-search {
+//   background: lightblue;
+//   margin: 4px;
+// }
+//
+// .nav-bar-greeting {
+//   background: lightblue;
+//   margin: 4px;
+// }
+
+.nav-bar-explore, .nav-bar-startProject, .nav-bar-aboutUs,
+ .nav-bar-logo, .nav-bar-search, .nav-bar-greeting {
+  // background: lightblue;
+  margin: 4px;
+  padding: 10px;
+  border: black 1px;
+}

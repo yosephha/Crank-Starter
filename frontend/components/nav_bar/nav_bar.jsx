@@ -1,30 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import Greeting from '../greeting/greeting_container';
 
 class NavBar extends React.Component {
 
   render(){
-    if (this.props.currentUser){
-      const name = this.props.currentUser.username;
-      return (
-        <section>
-          <h1>Welcome to the page, {name}</h1>
-          <button onClick={this.props.logout}>
-            Logout
-          </button>
-        </section>
-      );
-    } else {
-      return (
-        <section>
-          <Link to="/signup">SignUp!</Link>
-          {'  or  '}
-          <Link to="/login">Login</Link>
-        </section>
-      );
-    }
+    return(
+      <div className="nav-bar-container">
+        <div className="left-nav-bar">
+          <div className="nav-bar-explore">
+            explore
+          </div>
 
+          <div className="nav-bar-startProject">
+            start a project
+          </div>
+
+          <div className="nav-bar-aboutUs">
+            About us
+          </div>
+        </div>
+
+
+        <div className="nav-bar-logo">
+          <span className="crank">Crank</span> Starter
+        </div>
+
+        <div className="right-nav-bar">
+          <div className="nav-bar-search">
+            search
+          </div>
+
+          <div className="nav-bar-greeting">
+            <Greeting />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
