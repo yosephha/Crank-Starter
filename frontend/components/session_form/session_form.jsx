@@ -5,7 +5,10 @@ class SessionForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { username: "", password: "" };
+		this.userDemo = { user: { username: 'user', password: 'password' } };
+
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.demoLogin = this.demoLogin.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -69,6 +72,12 @@ class SessionForm extends React.Component {
 		);
 	}
 
+	demoLogin(e){
+		e.preventDefault();
+		this.props.login(this.userDemo)
+		.then(res => this.props.history.push('/'));
+	}
+
 	render() {
 		let formType, buttonType;
 		if (this.props.formType === 'login'){
@@ -108,7 +117,15 @@ class SessionForm extends React.Component {
 									value={buttonType}
 									className="login"
 						  />
+
+						<div className='separator-text'>
+								<span>or</span>
 							</div>
+							<div>
+								<button className="demo-login" onClick={this.demoLogin}>Demo</button>
+							</div>
+							</div>
+
 						</div>
 						<div className="redirect">
 							{this.navLink()}
@@ -119,7 +136,6 @@ class SessionForm extends React.Component {
 			</div>
 		);
 	}
-
 }
 
 export default withRouter(SessionForm);
