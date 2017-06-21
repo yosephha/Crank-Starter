@@ -27,8 +27,7 @@ div, form, input, textarea, span {
   clear: both;
 }
 
-.authFormContainer{
-  // background: #f7f1f1;
+.authFormContainer {
   position: relative;
   top: 60px;
 }
@@ -42,7 +41,7 @@ div, form, input, textarea, span {
   border: 1px solid #d2d2d2;
   display: flex;
   position: relative;
-  box-shadow: 10px 3px 33px #d8d8d8;
+  box-shadow: 10px 3px 33px #a3a2a2;
 }
 
 .redirect{
@@ -55,7 +54,7 @@ div, form, input, textarea, span {
   border-top: 1px solid #b3b0ad;
   font-size: 14px;
   color: #3D3D66;
-  box-shadow: 10px 3px 33px #d8d8d8;
+  box-shadow: 10px 3px 33px #a3a2a2;
 }
 
 .authFormInputs{
@@ -70,12 +69,12 @@ div, form, input, textarea, span {
 
 input[type=text], input[type=password]{
   width: 80%;
-  padding: 12px 25px;
+  padding: 11px 25px;
   background: white;
-  margin: 11px;
-  border-radius: 7px;
-  border: 1px solid grey;
-
+  margin: 10px;
+  border-radius: 3px;
+  border: 1px solid #dcd9d9;
+  text-align: -webkit-left;
 }
 
 input:focus {
@@ -101,7 +100,7 @@ input:focus {
   display: box;
   width: 80%;
   padding: 9px 34px;
-  border-radius: 10px;
+  border-radius: 7px;
   margin-top: 21px;
   margin-bottom: 10px;
 }
@@ -112,7 +111,7 @@ input:focus {
   display: box;
   width: 80%;
   padding: 9px 34px;
-  border-radius: 10px;
+  border-radius: 7px;
   margin-top: 21px;
   margin-bottom: 45px;
 }

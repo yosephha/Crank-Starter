@@ -1,6 +1,7 @@
 # Crankstarter
 
-[Heroku link][trello]
+[Heroku link][heroku]
+
 [Trello link][trello]
 
 [trello]:https://trello.com/b/mJrEJtKN/crank-starter
