@@ -9,8 +9,11 @@ class NavBar extends React.Component {
     return(
       <div className="nav-bar-container">
         <div className="left-nav-bar">
+          <div className='nav-icon'>
+            <i className="fa fa-compass fa-2x compass" aria-hidden="true"></i>
+          </div>
           <div className="nav-bar-explore">
-            explore
+            <Link to="/">Explore</Link>
           </div>
 
           <div className="nav-bar-startProject">
@@ -29,7 +32,7 @@ class NavBar extends React.Component {
 
         <div className="right-nav-bar">
           <div className="nav-bar-search">
-            search
+            <i className="fa fa-search" aria-hidden="true"></i>
           </div>
 
           <div className="nav-bar-greeting">

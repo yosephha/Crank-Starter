@@ -20,6 +20,27 @@
   font-weight: 900;
 }
 
+.nav-bar-explore {
+  text-align: center;
+  display: flex;
+  a {
+    display: block;
+  }
+    margin: auto;
+}
+
+.nav-icon{
+  margin: auto;
+  padding-left: 14px;
+  font-size: 12px;
+}
+
+.compass {
+  color: green;
+  margin-left: 2px;
+  display: block;
+}
+
 // .nav-bar-explore{
 //   background: lightblue;
 //   margin: 4px;
@@ -57,4 +78,5 @@
   padding: 10px;
   border: black 1px;
   text-align: center;
+  margin: auto;
 }

@@ -7,6 +7,27 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-User.create(username: 'user', password: 'password')
-User.create(username: 'yoseph', password: 'password')
-User.create(username: 'steveJobs', password: 'password')
+user1 = User.create(username: 'user', password: 'password')
+user2 = User.create(username: 'yoseph', password: 'password')
+user3 = User.create(username: 'steveJobs', password: 'password')
+
+#Projects
+Project.create( title: 'open a shop', website: 'www.shop.com',
+    description: 'bla bla bla', end_date: '07/08/2017',
+    funding_goal: '100000', details: 'bla bla bla',
+    creator_id: user1.id, category_id: 1)
+
+Project.create( title: 'buy a Lambo', website: 'www.lambo.com',
+    description: 'bla bla bla', end_date: '07/10/2017',
+    funding_goal: '1000000', details: 'bla bla bla',
+    creator_id: user1.id, category_id: 2)
+
+Project.create( title: 'go to paris', website: 'www.paris.com',
+    description: 'bla bla bla', end_date: '09/08/2017',
+    funding_goal: '20000', details: 'bla bla bla',
+    creator_id: user2.id, category_id: 3)
+
+Project.create( title: 'fund a start up', website: 'www.startup.com',
+    description: 'bla bla bla', end_date: '07/08/2017',
+    funding_goal: '40000000', details: 'bla bla bla',
+    creator_id: user3.id, category_id: 4)
