@@ -28,7 +28,7 @@ div, form, input, textarea, span {
 }
 
 .authFormContainer{
-  background: #e6e6e6;
+  // background: #f7f1f1;
   position: relative;
   top: 60px;
 }
@@ -42,6 +42,7 @@ div, form, input, textarea, span {
   border: 1px solid #d2d2d2;
   display: flex;
   position: relative;
+  box-shadow: 10px 3px 33px #d8d8d8;
 }
 
 .redirect{
@@ -57,6 +58,7 @@ div, form, input, textarea, span {
 
 .authFormInputs{
   text-align: center;
+  background: #fffbfb;
 }
 
 input[type=text], input[type=password]{

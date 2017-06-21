@@ -1,6 +1,9 @@
 .nav-bar-container{
   display: flex;
   justify-content: space-between;
+  background: #fffbfb;
+  border: 1px solid #f2f2f2;
+  box-shadow: 6px 3px 22px #e4e4e2;
 }
 
 .left-nav-bar, .right-nav-bar{
@@ -8,12 +11,13 @@
 }
 
 .crank {
-  color: green;
+  color: #25CB68;
 }
 
 .nav-bar-logo {
-  background: lightblue;
-  margin: 4px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 900;
 }
 
 // .nav-bar-explore{
@@ -52,4 +56,5 @@
   margin: 4px;
   padding: 10px;
   border: black 1px;
+  text-align: center;
 }
