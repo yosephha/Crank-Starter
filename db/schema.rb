@@ -10,22 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170621141744) do
+ActiveRecord::Schema.define(version: 20170622160103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       default: "none"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["name"], name: "index_categories_on_name", using: :btree
+  end
+
   create_table "projects", force: :cascade do |t|
-    t.string   "title",        null: false
+    t.string   "title",                    null: false
     t.string   "website"
-    t.text     "description",  null: false
-    t.date     "end_date",     null: false
-    t.integer  "funding_goal", null: false
-    t.text     "details",      null: false
-    t.integer  "creator_id",   null: false
-    t.integer  "category_id",  null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.text     "description",              null: false
+    t.date     "end_date",                 null: false
+    t.integer  "funding_goal",             null: false
+    t.text     "details",                  null: false
+    t.integer  "creator_id",               null: false
+    t.integer  "category_id",              null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "project_img_file_name"
+    t.string   "project_img_content_type"
+    t.integer  "project_img_file_size"
+    t.datetime "project_img_updated_at"
     t.index ["category_id"], name: "index_projects_on_category_id", using: :btree
     t.index ["creator_id"], name: "index_projects_on_creator_id", using: :btree
     t.index ["title", "creator_id"], name: "index_projects_on_title_and_creator_id", unique: true, using: :btree

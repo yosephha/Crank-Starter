@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import { signup, login, logout } from './actions/session_actions';
 import Root from './components/root';
+import { fetchProjects } from './actions/project_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -17,9 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 
-  // 
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  //
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.fetchProjects = fetchProjects;
   // window.login = login;
   // window.signup = signup;
   // window.logout = logout;

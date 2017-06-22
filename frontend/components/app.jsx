@@ -6,7 +6,8 @@ import { AuthRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
 import FormContainer from './session_form/session_form_container';
 import NavBar from './nav_bar/nav_bar_container';
-// import PostIndexContainer from './projects/project_index_container';
+import PostIndexContainer from './projects/project_index_container';
+import PostIndex from './projects/project_index';
 
 const App = () => (
   <div>
@@ -16,7 +17,7 @@ const App = () => (
     <div className="mainPage">
       <AuthRoute exact path="/login" component={FormContainer} />
       <AuthRoute exact path="/signup" component={FormContainer} />
-
+      <Route exact path="/" component={PostIndexContainer} />
     </div>
   </div>
 );

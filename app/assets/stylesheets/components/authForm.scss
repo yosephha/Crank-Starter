@@ -21,6 +21,10 @@ div, form, input, textarea, span {
   height: 480px;
 }
 
+form{
+  display: block;
+}
+
 .group:after {
   content: "";
   display: table;
@@ -30,6 +34,9 @@ div, form, input, textarea, span {
 .authFormContainer {
   position: relative;
   top: 60px;
+  display: block;
+  // border: 1px solid #d2d2d2;
+  // box-shadow: 10px 3px 33px #a3a2a2;
 }
 
 .authForm{
@@ -39,7 +46,6 @@ div, form, input, textarea, span {
   margin: auto;
   height: 430px;
   border: 1px solid #d2d2d2;
-  display: flex;
   position: relative;
   box-shadow: 10px 3px 33px #a3a2a2;
 }
@@ -50,11 +56,9 @@ div, form, input, textarea, span {
   width: 360px;
   padding: 20px 0;
   background: white;
-  border: 1px solid #d2d2d2;
   border-top: 1px solid #b3b0ad;
   font-size: 14px;
   color: #3D3D66;
-  box-shadow: 10px 3px 33px #a3a2a2;
 }
 
 .authFormInputs{

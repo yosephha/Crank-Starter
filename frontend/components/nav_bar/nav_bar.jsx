@@ -9,33 +9,31 @@ class NavBar extends React.Component {
     return(
       <div className="nav-bar-container">
         <div className="left-nav-bar">
-          <div className='nav-icon'>
-            <i className="fa fa-compass fa-2x compass" aria-hidden="true"></i>
-          </div>
-          <div className="nav-bar-explore">
-            <Link to="/">Explore</Link>
-          </div>
+          <Link to="/" className="site-nav__item">
+            <div className='nav-icon'>
+              <i className="fa fa-compass nav-icon compass" aria-hidden="true"></i>
+            </div>
+            <div className="nav-bar-explore">
+              <span>Explore</span>
+            </div>
+          </Link>
 
-          <div className="nav-bar-startProject">
-            start a project
-          </div>
-
-          <div className="nav-bar-aboutUs">
-            About us
-          </div>
+          <Link to="/" className="nav-bar-startProject site-nav__item">
+            Start a project
+          </Link>
         </div>
 
 
-        <div className="nav-bar-logo">
+        <Link to="/" className="nav-bar-logo site-nav__item">
           <span className="crank">Crank</span> Starter
-        </div>
+        </Link>
 
-        <div className="right-nav-bar">
-          <div className="nav-bar-search">
+        <div className="right-nav-bar site-nav__item">
+          <Link to="/" className="nav-bar-search">
             <i className="fa fa-search" aria-hidden="true"></i>
-          </div>
+          </Link>
 
-          <div className="nav-bar-greeting">
+          <div className="nav-bar-greeting site-nav__item">
             <Greeting />
           </div>
         </div>

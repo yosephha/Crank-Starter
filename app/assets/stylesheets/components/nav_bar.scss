@@ -4,6 +4,20 @@
   background: #fffbfb;
   border: 1px solid #f2f2f2;
   box-shadow: 10px 3px 33px #a3a2a2;
+  width: 100%;
+  height: 60px;
+}
+
+.site-nav__item {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    color: #020621;
+    text-decoration: none;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
 .left-nav-bar, .right-nav-bar{
@@ -12,68 +26,26 @@
 
 .crank {
   color: #25CB68;
+  margin-right: 6px;
 }
 
 .nav-bar-logo {
-  font-size: 25px;
+  font-size: 30px;
   font-family: sans-serif;
   font-weight: 900;
-}
-
-.nav-bar-explore {
-  text-align: center;
-  display: flex;
-  a {
-    display: block;
-  }
-    margin: auto;
+  font-family: 'Baloo Bhaina', cursive;
 }
 
 .nav-icon{
-  margin: auto;
-  padding-left: 14px;
-  font-size: 12px;
+  margin-top: 9px;
+  margin-left: 6px;
+  margin-right: -1px;
+  font-size: 24px;
+  color: #25CB68
 }
-
-.compass {
-  color: green;
-  margin-left: 2px;
-  display: block;
-}
-
-// .nav-bar-explore{
-//   background: lightblue;
-//   margin: 4px;
-// }
-//
-// .nav-bar-startProject{
-//   background: lightblue;
-//   margin: 4px;
-// }
-//
-// .nav-bar-aboutUs {
-//   background: lightblue;
-//   margin: 4px;
-// }
-//
-// .nav-bar-logo {
-//   background: lightblue;
-//   margin: 4px;
-// }
-//
-// .nav-bar-search {
-//   background: lightblue;
-//   margin: 4px;
-// }
-//
-// .nav-bar-greeting {
-//   background: lightblue;
-//   margin: 4px;
-// }
 
 .nav-bar-explore, .nav-bar-startProject, .nav-bar-aboutUs,
  .nav-bar-logo, .nav-bar-search, .nav-bar-greeting {
-  // background: lightblue;
   margin: 4px;
   padding: 10px;
   border: black 1px;

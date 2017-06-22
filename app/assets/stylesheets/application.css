@@ -17,3 +17,6 @@
 body{
   background: #f3efef;
 }
+button, input[type=submit]{
+  cursor: pointer;
+}
