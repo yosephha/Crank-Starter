@@ -1,4 +1,4 @@
-html, body, header, nav, h1, a,
+html, body, header, nav, h1, h4, a,
 ul, li, button, i, section, img,
 div, form, input, textarea, span {
   margin: 0;
@@ -35,8 +35,6 @@ form{
   position: relative;
   top: 60px;
   display: block;
-  // border: 1px solid #d2d2d2;
-  // box-shadow: 10px 3px 33px #a3a2a2;
 }
 
 .authForm{
@@ -107,6 +105,7 @@ input:focus {
   border-radius: 7px;
   margin-top: 21px;
   margin-bottom: 10px;
+  color: white;
 }
 
 .demo-login {

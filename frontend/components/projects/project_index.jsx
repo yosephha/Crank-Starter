@@ -8,13 +8,17 @@ class ProjectIndex extends React.Component {
   }
 
   render() {
-    const projects = this.props.projects.map((project) =>
-    <ProjectItem
-      key={project.id}
-      project={project}
-    />);
+    const projects = this.props.projects.map((project) => {
+      const category = this.props.categories[project.id]
+      return ( <ProjectItem
+        key={project.id}
+        project={project}
+        category={category}
+      />);
+    });
+
     return (
-      <section className ="listOfposts">
+      <section className ="all-projects">
         <ul className="indexContainer">
           {projects}
         </ul>

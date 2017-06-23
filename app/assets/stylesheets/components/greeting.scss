@@ -4,10 +4,16 @@
 
 .login-signup a, .loggedIn-icon a, button {
   display: block;
-  padding-left: 32px;
+  padding-left: 26px;
+  margin-right: 26px;
 }
 
 .header-name{
   display: block;
   background: red;
 }
+
+// .login-signup:hover {
+//   border-bottom: 3px solid #2BDE73;
+//   transition: all 0.15s ease;
+// }

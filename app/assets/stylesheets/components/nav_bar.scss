@@ -5,19 +5,20 @@
   border: 1px solid #f2f2f2;
   box-shadow: 10px 3px 33px #a3a2a2;
   width: 100%;
-  height: 60px;
+  height: 70px;
 }
 
 .site-nav__item {
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    color: #020621;
-    text-decoration: none;
-    flex-shrink: 0;
-    overflow: hidden;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  color: #020621;
+  text-decoration: none;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 12px;
 }
 
 .left-nav-bar, .right-nav-bar{
@@ -26,7 +27,6 @@
 
 .crank {
   color: #25CB68;
-  margin-right: 6px;
 }
 
 .nav-bar-logo {
@@ -37,11 +37,11 @@
 }
 
 .nav-icon{
-  margin-top: 9px;
-  margin-left: 6px;
+  margin-top: 6px;
+  margin-left: 7px;
   margin-right: -1px;
-  font-size: 24px;
-  color: #25CB68
+  font-size: 22px;
+  color: #25CB68;
 }
 
 .nav-bar-explore, .nav-bar-startProject, .nav-bar-aboutUs,
@@ -51,4 +51,10 @@
   border: black 1px;
   text-align: center;
   margin: auto;
+  font-size: 17px;
+}
+
+#logo {
+  font-size: 27px;
+  border-radius: 61px;
 }

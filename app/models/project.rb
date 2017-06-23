@@ -31,4 +31,6 @@ class Project < ApplicationRecord
 
   belongs_to :creator, foreign_key: :creator_id, class_name: :User
   belongs_to :category, foreign_key: :category_id, class_name: :Category
+
+  has_many :rewards, dependent: :destroy
 end
