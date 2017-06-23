@@ -26,7 +26,10 @@ const ProjectItem = (props) => {
       0, 100 - props.project.title.length
     ) + "...";
   }
-
+  let categoryName = '';
+  if(props.category){
+    categoryName = props.category.name
+  }
   return(
     <div className="project-item">
       <div className="project-img">
@@ -35,7 +38,7 @@ const ProjectItem = (props) => {
 
       <div className="discriptions">
         <div className="project-category">
-          <h4>{props.category.name}</h4>
+          <h4>{categoryName}</h4>
         </div>
         <div className="title-block">
           <span className="project-title">
