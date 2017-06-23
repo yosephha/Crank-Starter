@@ -1,6 +1,6 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.includes(:rewards).all
   end
 
   private

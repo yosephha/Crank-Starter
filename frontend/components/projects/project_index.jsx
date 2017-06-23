@@ -16,7 +16,7 @@ class ProjectIndex extends React.Component {
         category={category}
       />);
     });
-
+    
     return (
       <section className ="all-projects">
         <ul className="indexContainer">

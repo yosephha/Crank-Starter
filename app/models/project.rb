@@ -33,4 +33,5 @@ class Project < ApplicationRecord
   belongs_to :category, foreign_key: :category_id, class_name: :Category
 
   has_many :rewards, dependent: :destroy
+  # has_many :contributions, through: :rewards, source: :contributions
 end
