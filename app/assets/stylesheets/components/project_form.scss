@@ -1,0 +1,57 @@
+.form-container {
+  border: solid;
+  padding: 120px;
+}
+.inner-form-container{
+  border: solid;
+  border: solid;
+  padding: 30px;
+  display: flex;
+  width: 935px;
+  height: 1500px
+}
+
+.main-form{
+  border: 1px solid blue;
+  width: 650px;
+  margin-right: 56px;
+}
+
+.side-bar{
+  border: 1px solid blue;
+  width: 250px;
+}
+
+.project-img{
+  display: flex;
+  border: 1px solid lightblue;
+  margin: 16px;
+}
+
+.input-label {
+  width: 170px;
+  display: flex;
+}
+.input-label span {
+  margin-top: 20px;
+}
+
+.input-data {
+    overflow: hidden;
+    position: relative;
+}
+
+
+// .inputfile {
+// 	width: 0.1px;
+// 	height: 0.1px;
+// 	opacity: 0;
+// 	overflow: hidden;
+// 	position: absolute;
+// 	z-index: -1;
+// }
+//
+// .inputfile:focus input-file{
+// 	outline: 1px dotted #000;
+// 	outline: -webkit-focus-ring-color auto 5px;
+// }

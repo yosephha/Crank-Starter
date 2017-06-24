@@ -9,7 +9,7 @@ class NavBar extends React.Component {
     return(
       <div className="nav-bar-container">
         <div className="left-nav-bar">
-          <Link to="/" className="site-nav__item">
+          <Link to="/" className="site-nav__item green-hover">
             <div className='nav-icon'>
               <i className="fa fa-compass nav-icon compass" aria-hidden="true"></i>
             </div>
@@ -18,7 +18,7 @@ class NavBar extends React.Component {
             </div>
           </Link>
 
-          <Link to="/" className="nav-bar-startProject site-nav__item">
+          <Link to="projects/new" className="nav-bar-startProject site-nav__item">
             Start a project
           </Link>
         </div>

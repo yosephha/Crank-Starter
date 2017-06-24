@@ -59,7 +59,7 @@ class ProjectForm extends React.Component{
   handleSubmit(e) {
     e.preventDefault();
     var formData = new FormData();
-    
+
     formData.append("project[title]", this.state.title);
     formData.append("project[description]", this.state.description);
     formData.append("project[details]", this.state.details);
@@ -78,85 +78,96 @@ class ProjectForm extends React.Component{
   render(){
 
     return (
-      <div>
-        <form onSubmit={this.handleSubmit} >
-          <label>Project Image:
-            <input type="file" onChange={this.updateFile}/>
-            <img src={this.state.project_img_url}/>
-          </label>
-          <br />
-          <label>Project title:
-            <input
-              type="text"
-              value={this.state.title}
-              placeholder="title..."
-              onChange={this.update('title')}
-            />
-          </label>
-          <br />
-          <label>Website:
-            <input
-              type="text"
-              value={this.state.website}
-              placeholder = 'URL...'
-              onChange={this.update('website')}
-            />
+      <div className="form-container">
+        <div className="inner-form-container">
+          <div className="main-form">
+            <form onSubmit={this.handleSubmit} >
+              <div className="project-img">
+                <div className="input-label">
+                  <span>Project Image</span>
+                </div>
+                <div className="input-data">
+                  <input type="file" onChange={this.updateFile}/>
+                  <img src={this.state.project_img_url}/>
+                </div>
+              </div>
 
-          </label>
-          <br />
-          <label>Description:
-            <input type="text"
-              value={this.state.description}
-              placeholder = '...'
-              onChange={this.update('description')}
-            />
-          </label>
-          <label>Details:
-            <input type="text"
-              value={this.state.details}
-              placeholder = '...'
-              onChange={this.update('details')}
-            />
-          </label>
-          <br />
-          <label>Category:
-            <input
-              type="text"
-              value={this.state.category}
-              placeholder = 'category'
-              onChange={this.update('category')}
-            />
-          </label>
-          <br />
-          <label>End Date:
-            <input
-              id="date"
-              type="date"
-              onChange={this.update('end_date')}
-              value={this.state.end_date}
-            />
-          </label>
-          <br />
-          <label>Funding Goal:
-            <input
-              type="text"
-              value={this.funding_goal}
-              onChange={this.update('funding_goal')}
-              value={this.state.funding_goal}
-            />
-          </label>
-          <br />
-          <label>Details:
-            <input
-              type="text"
-              value={this.funding_goal}
-              onChange={this.update('details')}
-              value={this.state.details}
-            />
-          </label>
-          <br />
-          <input type='submit' value='NEXT' />
-        </form>
+              <br />
+              <label>Project title:
+                <input
+                  type="text"
+                  value={this.state.title}
+                  placeholder="title..."
+                  onChange={this.update('title')}
+                />
+              </label>
+              <br />
+              <label>Website:
+                <input
+                  type="text"
+                  value={this.state.website}
+                  placeholder = 'URL...'
+                  onChange={this.update('website')}
+                />
+
+              </label>
+              <br />
+              <label>Description:
+                <input type="text"
+                  value={this.state.description}
+                  placeholder = '...'
+                  onChange={this.update('description')}
+                />
+              </label>
+              <br />
+              <label>Details:
+                <input type="text"
+                  value={this.state.details}
+                  placeholder = '...'
+                  onChange={this.update('details')}
+                />
+              </label>
+              <br />
+              <label>Category:
+                <input
+                  type="text"
+                  value={this.state.category}
+                  placeholder = 'category'
+                  onChange={this.update('category')}
+                />
+              </label>
+              <br />
+              <label>End Date:
+                <input
+                  id="date"
+                  type="date"
+                  onChange={this.update('end_date')}
+                  value={this.state.end_date}
+                />
+              </label>
+              <br />
+              <label>Funding Goal:
+                <input
+                  type="text"
+                  value={this.funding_goal}
+                  onChange={this.update('funding_goal')}
+                  value={this.state.funding_goal}
+                />
+              </label>
+              <br />
+              <input type='submit' value='NEXT' />
+            </form>
+          </div>
+          <div className="side-bar">
+            <div>
+              advert
+            </div>
+            <div>
+              advert
+            </div>
+          </div>
+
+        </div>
       </div>
     );
   }
