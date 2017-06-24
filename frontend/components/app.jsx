@@ -8,6 +8,7 @@ import FormContainer from './session_form/session_form_container';
 import NavBar from './nav_bar/nav_bar_container';
 import PostIndexContainer from './projects/project_index_container';
 import PostIndex from './projects/project_index';
+import NewProjectFormContainer from './projects/project_form_container';
 
 const App = () => (
   <div>
@@ -18,6 +19,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={FormContainer} />
       <AuthRoute exact path="/signup" component={FormContainer} />
       <Route exact path="/" component={PostIndexContainer} />
+      <Route exact path="/projects/new" component={NewProjectFormContainer}/>
     </div>
   </div>
 );

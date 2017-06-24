@@ -18,18 +18,15 @@ const ProjectItem = (props) => {
     Math.floor(props.project.funded / props.project.funding_goal * 100)
   );
 
-  let modified;
-  if(props.project.title + 2 + props.project.discription > 100){
-    modified = props.project.description ? props.project.description : "";
-  } else{
-    modified = props.project.description.slice(
-      0, 100 - props.project.title.length
-    ) + "...";
-  }
+  const description = props.project.description ? props.project.description : "";
+  const modified = (props.project.title + description).length < 125 ?
+    description : description.slice(0, 125 - props.project.title.length) + "...";
+
   let categoryName = '';
   if(props.category){
     categoryName = props.category.name
   }
+  // debugger
   return(
     <div className="project-item">
       <div className="project-img">

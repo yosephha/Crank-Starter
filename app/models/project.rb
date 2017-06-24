@@ -20,7 +20,7 @@
 #
 
 class Project < ApplicationRecord
-  validates_presence_of :title, :description, :end_date, :details, :creator, :category
+  validates_presence_of :title, :description, :end_date, :details, :category_id
   validates :website, uniqueness: true
   validates :title, uniqueness: { scope: :creator_id }
   validates :funding_goal, numericality: true
