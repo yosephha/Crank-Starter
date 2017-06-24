@@ -57,8 +57,7 @@ class Api::ProjectsController < ApplicationController
     params.require(:project).permit(
       :title, :website, :description,
       :end_date, :funding_goal, :details,
-      :creator_id, :category_id, :project_img, :reward => [:title,
-        :description, :amount]
+      :creator_id, :category_id, :project_img, :reward => []
     )
   end
 end

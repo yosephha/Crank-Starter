@@ -26,7 +26,6 @@ const ProjectItem = (props) => {
   if(props.category){
     categoryName = props.category.name
   }
-  // debugger
   return(
     <div className="project-item">
       <div className="project-img">

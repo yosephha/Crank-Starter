@@ -28,12 +28,10 @@ class ProjectForm extends React.Component{
       category: "",
       funding_goal: 0,
       project_img_file: null,
-      project_img_url: null,
-      reward: [{
-        title: "Deafalt",
-        description: "deafalt",
-        amount: 5
-      }]
+      project_img_url: null
+      // reward: {
+      //   1: { title: "Deafalt", description: "deafalt", amount: 5 }
+      // }
     });
     this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,13 +42,6 @@ class ProjectForm extends React.Component{
     return e => this.setState({ [property]: e.target.value });
   }
   //-----------------AWS Tutorial---------------
-  // getInitialState() {
-  //   return({
-  //     body: "",
-  //     imageFile: null,
-  //     imageUrl: null
-  //   });
-  // }
 
   updateFile(e) {
     var file = e.currentTarget.files[0];
@@ -68,7 +59,7 @@ class ProjectForm extends React.Component{
   handleSubmit(e) {
     e.preventDefault();
     var formData = new FormData();
-    debugger
+    
     formData.append("project[title]", this.state.title);
     formData.append("project[description]", this.state.description);
     formData.append("project[details]", this.state.details);
@@ -77,19 +68,8 @@ class ProjectForm extends React.Component{
     formData.append("project[category_id]", this.state.category);
     formData.append("project[funding_goal]", this.state.funding_goal);
     formData.append("project[project_img]", this.state.project_img_file);
-    formData.append("project[reward]", JSON.stringify(this.state.reward));
+    // formData.append("project[reward]", this.state.reward);
 
-
-    // Object.keys(this.state).forEach( key => {
-    //   if (
-    //     key === "project_img_url" ||
-    //     (key === "project_img_file" && !this.state.project_img_file)
-    //   ) {
-    //     return;
-    //   }
-    //   formData.append(`project[${key}]`, this.state[key]);
-    // });
-    debugger
     this.props.createProject(formData);
   }
 
