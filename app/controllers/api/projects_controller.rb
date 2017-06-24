@@ -9,24 +9,23 @@ class Api::ProjectsController < ApplicationController
     @project.creator = current_user
     debugger
      if @project.save
-         rewards = params[:project][:reward].each do |key, value|
-           params[:project][:reward][key][:project_id]=@project.id
-         end
-        #  rewards = params[:project][:reward].each{|reward|  reward[:project_id]=@project.id}
-          success = rewards.each do |key, reward|
-            Reward.new(
-              title: reward[:title],
-              description: reward[:description],
-              amount: reward[:amount].to_i,
-              project_id: reward[:project_id]
-            ).save
-          end
+       rewards = params[:project][:reward].each do |key, value|
+         params[:project][:reward][key][:project_id]=@project.id
+       end
+        success = rewards.each do |key, reward|
+          Reward.new(
+            title: reward[:title],
+            description: reward[:description],
+            amount: reward[:amount].to_i,
+            project_id: reward[:project_id]
+          ).save
+        end
 
-          if success.include?(false)
-            render json: "error creating rewards", status: 500
-          else
-            render "api/projects/show"
-          end
+        if success.include?(false)
+          render json: "error creating rewards", status: 500
+        else
+          render "api/projects/show"
+        end
      else
        render json: @project.errors.full_messages, status: 422
      end
@@ -58,7 +57,8 @@ class Api::ProjectsController < ApplicationController
     params.require(:project).permit(
       :title, :website, :description,
       :end_date, :funding_goal, :details,
-      :creator_id, :category_id, :project_img, :reward => []
+      :creator_id, :category_id, :project_img, :reward => [:title,
+        :description, :amount]
     )
   end
 end
