@@ -106,69 +106,191 @@ class ProjectForm extends React.Component{
               </div>
 
               <br />
-              <label>Project title:
-                <input
-                  type="text"
-                  value={this.state.title}
-                  placeholder="title..."
-                  onChange={this.update('title')}
-                />
-              </label>
+              <div className="project-title">
+                <div className="input-label-title">
+                  <span>Project title</span>
+                </div>
+                <div className="input-title">
+                  <ul>
+                    <li>
+                      <input
+                        type="text"
+                        value={this.state.title}
+                        placeholder="title..."
+                        onChange={this.update('title')}
+                        />
+                    </li>
+                    <li className="rand-text">
+                      <p>
+                        Our search looks through words from your project title
+                        and blurb, so make them clear and descriptive of what
+                        you’re making. Your profile name will be searchable,
+                        too.
+                      </p>
+                      <p>
+                        These words will help people find your project, so choose
+                        them wisely! Your name will be searchable too.
+                      </p>
+                    </li>
+                </ul>
+              </div>
+            </div>
               <br />
-              <label>Website:
-                <input
-                  type="text"
-                  value={this.state.website}
-                  placeholder = 'URL...'
-                  onChange={this.update('website')}
-                />
 
-              </label>
+              <div className="project-description-form">
+                <div className="input-label-description">
+                  <span>Short blurb</span>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <input type="text"
+                        value={this.state.description}
+                        placeholder = '...'
+                        onChange={this.update('description')}
+                        />
+                    </li>
+                    <li className="rand-text">
+                      <p >
+                        Give people a sense of what you’re doing. Skip
+                        “Help me” and focus on what you’re making.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
               <br />
-              <label>Description:
-                <input type="text"
-                  value={this.state.description}
-                  placeholder = '...'
-                  onChange={this.update('description')}
-                />
-              </label>
+              <div className="project-description-form">
+                <div className="input-label-description">
+                  <span>Website</span>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <input
+                        type="text"
+                        value={this.state.website}
+                        placeholder = 'URL...'
+                        onChange={this.update('website')}
+                        />
+                    </li>
+                    <li className="rand-text">
+                      First thing people usually do to understand your ideas.
+                      It would make it easier for contributers to do their reserch.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
               <br />
-              <label>Details:
-                <input type="text"
-                  value={this.state.details}
-                  placeholder = '...'
-                  onChange={this.update('details')}
-                />
-              </label>
+                <div className="project-description-form">
+                  <div className="input-label-description">
+                    <span>Details</span>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <input type="text"
+                          value={this.state.details}
+                          placeholder = '...'
+                          onChange={this.update('details')}
+                        />
+                      </li>
+                      <li className="rand-text">
+                        <p >
+                          Give people a sense of what you’re doing in details.
+                          Skip “Help me” and focus on what you’re making, and how
+                          It affects others.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               <br />
-              <label>Category:
-                <input
-                  type="text"
-                  value={this.state.category}
-                  placeholder = 'category'
-                  onChange={this.update('category')}
-                />
-              </label>
+
+                <div className="project-description-form">
+                  <div className="input-label-description">
+                    <span>Category</span>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <input
+                          type="text"
+                          value={this.state.category}
+                          placeholder = 'category'
+                          onChange={this.update('category')}
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               <br />
-              <label>End Date:
-                <input
-                  id="date"
-                  type="date"
-                  onChange={this.update('end_date')}
-                  value={this.state.end_date}
-                />
-              </label>
+                <div className="project-description-form">
+                  <div className="input-label-description">
+                    <span>End Date</span>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <input
+                          id="date"
+                          type="date"
+                          onChange={this.update('end_date')}
+                          value={this.state.end_date}
+                        />
+                      </li>
+                      <li className="rand-text">
+                        <p >
+                          Projects with shorter durations have higher success
+                          rates. You won’t be able to adjust your duration after
+                          you launch.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
               <br />
-              <label>Funding Goal:
-                <input
-                  type="text"
-                  value={this.funding_goal}
-                  onChange={this.update('funding_goal')}
-                  value={this.state.funding_goal}
-                />
-              </label>
+                <div className="project-description-form">
+                  <div className="input-label-description">
+                    <span>Funding Goal</span>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <input
+                          type="text"
+                          value={this.funding_goal}
+                          onChange={this.update('funding_goal')}
+                          value={this.state.funding_goal}
+                        />
+                      </li>
+                      <li className="rand-text">
+                        <p >
+                          Funding on Kickstarter is all-or-nothing. It’s okay to
+                          raise more than your goal, but if your goal isn’t met,
+                          no money will be collected. Your goal should reflect
+                          the minimum amount of funds you need to complete your
+                          project and send out rewards, and include a buffer for
+                          payments processing fees.
+                        </p>
+                        <p>
+                          If your project is successfully funded, the following
+                          fees will be collected from your funding total:
+                          Kickstarter’s 5% fee, and payment processing fees
+                          (between 3% and 5%). If funding isn’t successful,
+                          there are no fees.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               <br />
-              <input type='submit' value='NEXT' />
+              <div className="start-project-submit">
+                <input id="start-project-submit" type='submit' value='Create Project!' />
+              </div>
             </form>
           </div>
           <div className="side-bar">
@@ -179,7 +301,6 @@ class ProjectForm extends React.Component{
               advert
             </div>
           </div>
-
         </div>
       </div>
     );
