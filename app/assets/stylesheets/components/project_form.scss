@@ -179,3 +179,26 @@ h3.start-form-header2 {
     width: 958px;
     font-weight: 300;
 }
+
+select {
+    width: 453px;
+    height: 44px;
+    margin-left: 11px;
+    background: white;
+    font-size: 17px;
+    border: 1px solid #dcd9d9;
+    text-align: center;
+    color: #c7c7c7;
+}
+
+input#date {
+  width: 447px;
+  height: 33px;
+  margin-left: 11px;
+  background: white;
+  font-size: 17px;
+  border: 1px solid #dcd9d9;
+  border-radius: 6px;
+  color: #c7c7c7;
+  padding: 4px;
+}

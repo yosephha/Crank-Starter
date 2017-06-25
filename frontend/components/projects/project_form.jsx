@@ -38,6 +38,10 @@ class ProjectForm extends React.Component{
     this.update = this.update.bind(this);
   }
 
+  componentDidMount(){
+    this.props.fetchCategories();
+  }
+
   update(property) {
     return e => this.setState({ [property]: e.target.value });
   }
@@ -55,17 +59,25 @@ class ProjectForm extends React.Component{
     }
   }
 
+  swap_cat(json){
+    var ret = {};
+    for(var key in json){
+      ret[json[key].name] = key;
+    }
+    return ret;
+  }
 
   handleSubmit(e) {
     e.preventDefault();
     var formData = new FormData();
-
+    const category = this.swap_cat(this.props.categories);
+    debugger
     formData.append("project[title]", this.state.title);
     formData.append("project[description]", this.state.description);
     formData.append("project[details]", this.state.details);
     formData.append("project[website]", this.state.website);
     formData.append("project[end_date]", this.state.end_date);
-    formData.append("project[category_id]", this.state.category);
+    formData.append("project[category_id]", category[this.state.category]);
     formData.append("project[funding_goal]", this.state.funding_goal);
     formData.append("project[project_img]", this.state.project_img_file);
     // formData.append("project[reward]", this.state.reward);
@@ -77,6 +89,7 @@ class ProjectForm extends React.Component{
   //--------------------------------
 
   render(){
+
 
     return (
       <div className="form-container">
@@ -127,7 +140,6 @@ class ProjectForm extends React.Component{
                       <input
                         type="text"
                         value={this.state.title}
-                        placeholder="title..."
                         onChange={this.update('title')}
                         />
                     </li>
@@ -158,7 +170,6 @@ class ProjectForm extends React.Component{
                     <li>
                       <input type="text"
                         value={this.state.description}
-                        placeholder = '...'
                         onChange={this.update('description')}
                         />
                     </li>
@@ -184,7 +195,6 @@ class ProjectForm extends React.Component{
                       <input
                         type="text"
                         value={this.state.website}
-                        placeholder = 'URL...'
                         onChange={this.update('website')}
                         />
                     </li>
@@ -207,7 +217,6 @@ class ProjectForm extends React.Component{
                       <li>
                         <input type="text"
                           value={this.state.details}
-                          placeholder = '...'
                           onChange={this.update('details')}
                         />
                       </li>
@@ -231,17 +240,22 @@ class ProjectForm extends React.Component{
                   <div>
                     <ul>
                       <li>
-                        <input
-                          type="text"
-                          value={this.state.category}
-                          placeholder = 'category'
+                        <select
+                          name="expertise"
                           onChange={this.update('category')}
-                        />
+                          value={this.state.category}
+                        >
+                          <option value="x" disabled="true">--Select a category--</option>
+                          {
+                            categories.map(category => (
+                              <option key={category} value={category}>{category}</option>
+                            ))
+                          }
+                        </select>
                       </li>
                     </ul>
                   </div>
                 </div>
-
               <br />
                 <div className="project-description-form">
                   <div className="input-label-description">

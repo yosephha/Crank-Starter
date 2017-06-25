@@ -6,6 +6,9 @@
   box-shadow: 10px 3px 33px #a3a2a2;
   width: 100%;
   height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .site-nav__item {
