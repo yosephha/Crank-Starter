@@ -1,31 +1,30 @@
 .form-container {
-  border: solid;
   padding: 120px;
 }
 .inner-form-container{
-  border: solid;
-  border: solid;
   padding: 30px;
   display: flex;
   width: 935px;
-  height: 1600px
+  height: 1800px;
+  background: white;
+  border: 1px solid #e4d9d9;
+  overflow: hidden;
 }
 
 .main-form{
-  border: 1px solid blue;
   width: 650px;
   margin-right: 56px;
 }
 
 .side-bar{
-  border: 1px solid blue;
-  width: 250px;
+  width: 280px;
 }
 
-.project-img, .start-project-submit, .project-title, .project-description-form {
+.start-project-img, .start-project-submit, .start-project-title, .project-description-form {
   display: flex;
-  border: 1px solid lightblue;
-  margin: 16px;
+  margin: 17px;
+  background: #F8F9FD;
+  padding: 9px;
 }
 
 .input-label{
@@ -33,7 +32,7 @@
   display: flex;
 }
 
-.project-title, .project-description-form{
+.start-project-title, .project-description-form{
   display: flex;
 }
 .input-label span {
@@ -80,7 +79,7 @@ input[type="text"]{
   color: red;
 
 }
-.project-title, .project-description-form{
+.start-project-title, .project-description-form{
   font-family: sans-serif;
   font-size: 18px;
   margin: 16px;
@@ -121,4 +120,62 @@ li.rand-text {
   color: white;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.start-tip{
+  display: flex;
+  background: #f5f4ea;
+  padding: 5px;
+  margin-top: 20px;
+
+}
+
+i.fa.fa-lightbulb-o {
+    font-size: 28px;
+    padding: 18px;
+    color: #e0e02d;
+}
+.start-tip-link{
+  color: blue;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.start-plain-text{
+  font-size: 14px;
+  FONT-FAMILY: serif;
+}
+
+.advert-head{
+  color: yellow;
+}
+
+.start-advert-head {
+    font-weight: 600;
+    font-family: serif;
+    margin-top: 29px;
+    margin-bottom: 18px;
+}
+
+span.start-tip-link-two {
+    color: blue;
+    font-size: 14px;
+}
+
+.start-form-header {
+    text-align: center;
+}
+h1.start-form-header1 {
+    font-size: 38px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 13px;
+}
+
+h3.start-form-header2 {
+    font-family: sans-serif;
+    font-size: 24px;
+    padding: 51px;
+    width: 958px;
+    font-weight: 300;
 }

@@ -71,6 +71,7 @@ class ProjectForm extends React.Component{
     // formData.append("project[reward]", this.state.reward);
 
     this.props.createProject(formData);
+    // this.props.history.push('/');
   }
 
   //--------------------------------
@@ -79,10 +80,19 @@ class ProjectForm extends React.Component{
 
     return (
       <div className="form-container">
+        <div className="start-form-header">
+          <h1 className="start-form-header1">
+            Let’s get started.
+          </h1>
+          <h3 className="start-form-header2">
+            Make a great first impression with your project’s title and image,
+            and set your funding goal, campaign duration, and project category.
+          </h3>
+        </div>
         <div className="inner-form-container">
           <div className="main-form">
             <form onSubmit={this.handleSubmit} >
-              <div className="project-img">
+              <div className="start-project-img">
                 <div className="input-label">
                   <ul>
                     <li>
@@ -106,7 +116,8 @@ class ProjectForm extends React.Component{
               </div>
 
               <br />
-              <div className="project-title">
+
+              <div className="start-project-title">
                 <div className="input-label-title">
                   <span>Project title</span>
                 </div>
@@ -134,7 +145,8 @@ class ProjectForm extends React.Component{
                     </li>
                 </ul>
               </div>
-            </div>
+              </div>
+
               <br />
 
               <div className="project-description-form">
@@ -161,6 +173,7 @@ class ProjectForm extends React.Component{
               </div>
 
               <br />
+
               <div className="project-description-form">
                 <div className="input-label-description">
                   <span>Website</span>
@@ -184,7 +197,8 @@ class ProjectForm extends React.Component{
               </div>
 
               <br />
-                <div className="project-description-form">
+
+              <div className="project-description-form">
                   <div className="input-label-description">
                     <span>Details</span>
                   </div>
@@ -207,9 +221,10 @@ class ProjectForm extends React.Component{
                     </ul>
                   </div>
                 </div>
+
               <br />
 
-                <div className="project-description-form">
+              <div className="project-description-form">
                   <div className="input-label-description">
                     <span>Category</span>
                   </div>
@@ -226,6 +241,7 @@ class ProjectForm extends React.Component{
                     </ul>
                   </div>
                 </div>
+
               <br />
                 <div className="project-description-form">
                   <div className="input-label-description">
@@ -253,7 +269,8 @@ class ProjectForm extends React.Component{
                 </div>
 
               <br />
-                <div className="project-description-form">
+
+              <div className="project-description-form">
                   <div className="input-label-description">
                     <span>Funding Goal</span>
                   </div>
@@ -287,19 +304,42 @@ class ProjectForm extends React.Component{
                     </ul>
                   </div>
                 </div>
+
               <br />
-              <div className="start-project-submit">
-                <input id="start-project-submit" type='submit' value='Create Project!' />
-              </div>
+
+              <input id="start-project-submit" type='submit' value='Create Project!' />
             </form>
           </div>
           <div className="side-bar">
-            <div>
-              advert
-            </div>
-            <div>
-              advert
-            </div>
+            <ul>
+              <li>
+                <div className="start-tip">
+                  <div>
+                    <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  </div>
+                  <p>
+                    How to:<br />
+                    <span className="start-tip-link">Make an awsome project</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="start-advert-head">
+                  Need advice?
+                </div>
+              </li>
+              <li>
+                <span className="start-plain-text">
+                  Visit Campus to read discussions about
+                </span>
+                {' '}
+                <span className="start-tip-link-two">
+                  preparing for a project
+                </span>
+                {' '}
+                <span className="start-plain-text">and more.</span>
+              </li>
+          </ul>
           </div>
         </div>
       </div>

@@ -4,10 +4,8 @@ class Api::ProjectsController < ApplicationController
   end
 
   def create
-    debugger
     @project = Project.new(project_params)
     @project.creator = current_user
-    debugger
      if @project.save
        rewards = params[:project][:reward].each do |key, value|
          params[:project][:reward][key][:project_id]=@project.id
