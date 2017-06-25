@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ProjectIndex from './project_index';
 import { fetchProjects } from '../../actions/project_actions';
 import { allProjects } from '../../reducers/selector';
-import { fetchCategories } from '../../actions/category_action'
+import { fetchCategories } from '../../actions/category_action';
 
 const mapStateToProps = (state) => {
   return ({

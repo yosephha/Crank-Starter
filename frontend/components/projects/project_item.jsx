@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Line } from 'rc-progress';
+import { Link } from 'react-router-dom';
 
 const ProjectItem = (props) => {
   const numberWithCommas = (x) => (
@@ -28,9 +29,9 @@ const ProjectItem = (props) => {
   }
   return(
     <div className="project-item">
-      <div className="project-img">
+      <Link to={`/projects/${props.project.id}`} className="project-img">
         <img className="img" src={props.project.project_img} />
-      </div>
+      </Link>
 
       <div className="discriptions">
         <div className="project-category">

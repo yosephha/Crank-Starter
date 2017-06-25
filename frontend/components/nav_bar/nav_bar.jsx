@@ -18,7 +18,7 @@ class NavBar extends React.Component {
             </div>
           </Link>
 
-          <Link to="projects/new" className="nav-bar-startProject site-nav__item">
+          <Link to="/projects/new" className="nav-bar-startProject site-nav__item">
             Start a project
           </Link>
         </div>

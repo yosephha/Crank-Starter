@@ -71,7 +71,8 @@ ul {
 list-style-type: none;
 }
 
-input[type="text"]{
+// input[type="text"]{
+.form-container input[type="text"] {
   width: 390px;
   border-radius: 9px;
 }

@@ -24,7 +24,6 @@ class ProjectForm extends React.Component{
       details: "",
       website: "",
       end_date: "",
-      creator_id:this.props.currentUser.id,
       category: "",
       funding_goal: 0,
       project_img_file: null,
@@ -169,6 +168,7 @@ class ProjectForm extends React.Component{
                   <ul>
                     <li>
                       <input type="text"
+                        className="start-form-input-text"
                         value={this.state.description}
                         onChange={this.update('description')}
                         />
@@ -195,6 +195,7 @@ class ProjectForm extends React.Component{
                       <input
                         type="text"
                         value={this.state.website}
+                        className="start-form-input-text"
                         onChange={this.update('website')}
                         />
                     </li>
@@ -216,6 +217,7 @@ class ProjectForm extends React.Component{
                     <ul>
                       <li>
                         <input type="text"
+                          className="start-form-input-text"
                           value={this.state.details}
                           onChange={this.update('details')}
                         />
@@ -293,6 +295,7 @@ class ProjectForm extends React.Component{
                       <li>
                         <input
                           type="text"
+                          className="start-form-input-text"
                           value={this.funding_goal}
                           onChange={this.update('funding_goal')}
                           value={this.state.funding_goal}
