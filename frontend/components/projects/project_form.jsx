@@ -84,11 +84,24 @@ class ProjectForm extends React.Component{
             <form onSubmit={this.handleSubmit} >
               <div className="project-img">
                 <div className="input-label">
-                  <span>Project Image</span>
+                  <ul>
+                    <li>
+                      <span>Project Image</span>
+                    </li>
+                    <li>
+                      <div className="img-container">
+                        <img src={this.state.project_img_url}/>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="input-data">
-                  <input type="file" onChange={this.updateFile}/>
-                  <img src={this.state.project_img_url}/>
+                  <input
+                    type="file"
+                    className="input-file"
+                    onChange={this.updateFile}
+                    id="file"
+                  />
                 </div>
               </div>
 
