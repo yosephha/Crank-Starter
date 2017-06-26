@@ -71,7 +71,6 @@ class ProjectForm extends React.Component{
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
     var formData = new FormData();
     const category = this.swap_cat(this.props.categories);
@@ -136,7 +135,7 @@ class ProjectForm extends React.Component{
               </li>
               <li>
                 <span>Description</span>
-                <textarea placeholder="Reward description" onChange={this.setReward.bind(this,index)}></textarea>
+                <textarea onChange={this.setReward.bind(this,index)}></textarea>
               </li>
             </ul>
           </div>
@@ -387,7 +386,7 @@ class ProjectForm extends React.Component{
               <br />
                 <div className="wrapper">
                   {this.reward()}
-                  <button onClick={this.addReward}>Add Reward</button>
+                  <button className="addReward-button"onClick={this.addReward}>Add Reward</button>
                 </div>
               <br />
               <input id="start-project-submit" type='submit' value='Create Project!' />

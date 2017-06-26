@@ -1,6 +1,6 @@
 .add-reward-table{
-  border: 1px solid grey;
-  width: 300px;
+  // border: 1px solid grey;
+  width: 420px;
 }
 
 .add-reward-table ul:first-child span {
@@ -8,13 +8,17 @@
 }
 
 .add-reward-table ul span {
-  width: 115px;
+  width: 100px;
+  padding-bottom: 19px;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-left: 20px;
 }
 
 .add-reward-table ul li {
   display: flex;
-  border: 1px solid grey;
-  text-align: center;
+  border: 1px solid #ccc9c9;
+  background: white;
 }
 
 .add-reward-table ul:first-child input, .add-reward-table textarea {
@@ -23,8 +27,16 @@
   margin: 0;
   height: inherit;
   border-radius: 0;
-  border: 1px solid grey;
-  width: 200px;
+  border-left: 1px solid #ccc9c9;
+  width: 334px;
   background: white;
+}
 
+.addReward-button {
+  display: block;
+  border: 2px dotted #ccc9c9;
+  padding: 22px 259px;
+  border-radius: 10px;
+  margin-left: 20px;
+  cursor: pointer;
 }
