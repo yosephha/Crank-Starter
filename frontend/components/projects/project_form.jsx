@@ -123,20 +123,23 @@ class ProjectForm extends React.Component{
         return(
           <div key={index} className="project-description-form">
           <p className="input-label-description">Reward {index+1}</p>
+
           <div className="add-reward-table">
-            <div>
-              <p className="left-column-reward">Title</p>
-              <input type="text" onChange={this.setTitle.bind(this,index)}/>
-            </div>
-            <div>
-              <p className="left-column-reward">Amount</p>
-              <input type="number" onChange={this.setAmount.bind(this,index)}/>
-            </div>
-            <div>
-              <p className="left-column-reward">Description</p>
-              <textarea placeholder="Reward description" onChange={this.setReward.bind(this,index)}></textarea>
-            </div>
-            </div>
+            <ul>
+              <li>
+                <span>Title</span>
+                <input type="text" onChange={this.setTitle.bind(this,index)}/>
+              </li>
+              <li>
+                <span>Amount</span>
+                <input type="number" onChange={this.setAmount.bind(this,index)}/>
+              </li>
+              <li>
+                <span>Description</span>
+                <textarea placeholder="Reward description" onChange={this.setReward.bind(this,index)}></textarea>
+              </li>
+            </ul>
+          </div>
         </div>);
       })
     );
