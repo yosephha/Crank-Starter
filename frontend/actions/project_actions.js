@@ -1,8 +1,9 @@
 import * as APIUtil from '../util/project_util';
-
+import { receiveErrors } from './error_actions';
 export const RECIVE_PROJECTS = 'RECIVE_PROJECTS';
 export const RECEIVE_PROJECT_DETAIL = 'RECEIVE_PROJECT_DETAIL';
 export const CREATE_PROJECT = 'CREATE_PROJECT';
+export const REMOVE_PROJECT = 'REMOVE_PROJECT';
 
 export const reciveProjects = projects =>({
   type: RECIVE_PROJECTS,
@@ -11,6 +12,11 @@ export const reciveProjects = projects =>({
 
 export const reciveProjectDetail = project => ({
   type: RECEIVE_PROJECT_DETAIL,
+  project
+});
+
+export const removeProject = project => ({
+  type: REMOVE_PROJECT,
   project
 });
 
@@ -29,4 +35,17 @@ export const fetchProject = (id) => dispatch => (
 export const fetchProjects = () => dispatch => (
   APIUtil.fetchProjects()
   .then((projects) => dispatch(reciveProjects(projects)))
+);
+
+export const updateProject = project => dispatch => (
+  APIUtil.updateProject(project)
+    .then(res => {
+      dispatch(receiveProjectDetail(res));
+      return res;
+    }).fail(err => dispatch(receiveProjectErrors(err.responseJSON)))
+);
+
+export const deleteProject = project => dispatch => (
+  APIUtil.deleteProject(project)
+    .then(res => dispatch(removeProject(res)))
 );

@@ -4,59 +4,91 @@ import { Line } from 'rc-progress';
 import { Link } from 'react-router-dom';
 
 class ProjectDetail extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.userButtons = this.userButtons.bind(this);
+  }
 
   componentDidMount(){
     this.props.fetchCategories();
     this.props.fetchProject(this.props.match.params.id);
     this.props.fetchProjects();
   }
+
+  dateRemaining(end_date){
+    const currentDate = new Date();
+    return this.numberWithCommas(
+      Math.ceil((new Date(end_date) - currentDate) / 86400000)
+    );
+  }
+
+
+  numberWithCommas(x){
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  }
+
+  userButtons() {
+    let detailId = this.props.project.creator ? this.props.project.creator_id : 0;
+    if (this.props.currentUser && detailId === this.props.currentUser.id) {
+      const destroyProject = () => {
+        this.props.deleteProject(this.props.project);
+      };
+      return(
+        <span className="userButtons">
+          <Link to={`/projects/${this.props.project.id}/edit`}><button>Edit this project</button></Link> &nbsp;
+          <Link
+            to="/"><button
+            onClick={ destroyProject }
+          >Delete this project</button></Link>
+        </span>
+      );
+    } else {
+      return "";
+    }
+  }
+
   render(){
-    const project = this.props.project
-    const categories = this.props.categories
-    
+    const project = this.props.project;
+    const categories = this.props.categories;
     if(this.props.project === undefined) return null;
     return(
       <div className="project-show-page">
-        <div className="project-item">
-          <div to={`/projects/${project.id}`} className="project-img">
-            <img className="img" src={project.project_img} />
+        <div>
+          {this.userButtons()}
+
+          <div className="detail-user-title">
+            <div className="detail-user">
+              <p className="detail-user-name">
+                By<span>{project.creator}</span>
+              </p>
+            </div>
+            <div className="display-title">
+              <p id="display-title">{project.title}</p>
+              <p id="descriptionText">{project.description}</p>
+            </div>
           </div>
 
-          <div className="discriptions">
-            <div className="project-category">
-              <h4>{categories[project.category_id].name}</h4>
-            </div>
-            <div className="title-block">
-              <span className="project-title">
-                {project.title}:
-              </span>
-              {' '}
-              <span className="project-description">
-              </span>
+          <div className="detail-img-stats">
+            <div className="detail-project-img">
+              <img className="detail-img" src={project.project_img} />
             </div>
 
-            <div className="author">
-              <i className="fa fa-user-circle-o user-icon" aria-hidden="true"></i>
-              by: {' '}
-              <span>{project.creator}</span>
+            <div className="detail-stats">
+              <div className="pledged">
+                $
+                <span>{project.funding_goal}</span>
+                {' '}
+                <span className="stat-txt">pledged</span>
+              </div>
+
+              <div className="remaining">
+                <span>{this.dateRemaining(project.end_date)}</span>
+                {' '}
+                <span className="stat-txt">days to go</span>
+              </div>
             </div>
-            <Line percent="60" strokeWidth="2" strokeColor="#2BDE73" />
-            <div className="pledged">
-              $
-              <span>{project.funding_goal}</span>
-              {' '}
-              <span className="stat-txt">pledged</span>
-            </div>
-            <div className="funded">
-              <span>{100}%</span>
-               {' '}
-              <span className="stat-txt">funded</span>
-            </div>
-            <div className="remaining">
-              <span>{project.end_date}</span>
-              {' '}
-              <span className="stat-txt">days to go</span>
-            </div>
+
           </div>
         </div>
       </div>

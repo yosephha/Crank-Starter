@@ -10,7 +10,7 @@ class ProjectIndex extends React.Component {
   render() {
     const projects = this.props.projects.map((project) => {
       const category = this.props.categories[project.category_id]
-      // debugger
+
       return ( <ProjectItem
         key={project.id}
         project={project}

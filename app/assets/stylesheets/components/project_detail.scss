@@ -1,0 +1,89 @@
+.project-show-page {
+  border: 2px solid blue;
+  margin-top: 113px;
+}
+// Title and username
+.detail-user-title {
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.detail-user {
+  padding: 30px 0;
+  margin: 39px 44px;
+  width: 130px;
+  font-size: 15px;
+
+}
+
+.detail-user-name {
+  width: 20%;
+  margin-left: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-user-title div:nth-child(2) {
+  width: 80%;
+  margin-right: 90px;
+  margin-bottom: 35px;
+}
+
+.detail-user-title div p span {
+  font-weight: bold;
+}
+
+p#display-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+#descriptionText{
+  font-size: 18px;
+  color: #737373;
+}
+
+.detail-user-title div:first-child > * {
+  margin: 10px;
+}
+
+#descriptionText {
+  line-height: 24px;
+}
+
+.detail-img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.detail-project-img{
+  display: block;
+  width: 755px;
+  position: relative;
+  padding: 0 63px;
+}
+detail-user {
+  border: 1px solid green;
+  width: 599px;
+  height: 133px;
+  margin-right: 100px
+}
+
+
+
+.detail-img-stats{
+  display: flex;
+}
+
+.detail-stats {
+    border: 1px solid;
+    width: 344px;
+}
+
+.detail-stats {
+    border: 1px solid;
+    width: 344px;
+}

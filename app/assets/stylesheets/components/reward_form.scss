@@ -1,0 +1,12 @@
+.add-reward-table{
+  border: 1px solid grey;
+}
+
+.add-reward-table div:first-child {
+  display: flex;
+}
+
+.left-column-reward {
+  border-right: 1px solid grey;
+  display: block;
+}

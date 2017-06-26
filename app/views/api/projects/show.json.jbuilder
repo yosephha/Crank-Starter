@@ -2,6 +2,7 @@ project = @project
  json.extract! project, :id, :title, :website, :description,
  :category_id, :end_date, :funding_goal
   json.creator project.creator.username
+  json.creator_id project.creator.id
   json.project_img asset_path(project.project_img.url)
   json.funded project.rewards.map { |reward|
      reward.contributions.count * reward.amount

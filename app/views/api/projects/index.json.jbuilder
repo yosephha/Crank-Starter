@@ -4,6 +4,7 @@
     json.title project.title
     json.description project.description
     json.creator project.creator.username
+    json.creator_id project.creator.id
     json.category_id project.category_id
     json.category project.category
     json.end_date project.end_date

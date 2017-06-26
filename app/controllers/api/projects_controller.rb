@@ -1,32 +1,40 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.includes(:rewards).all
+    @projects = Project.includes(:rewards, :category).all
   end
 
   def create
     @project = Project.new(project_params)
     @project.creator = current_user
-     if @project.save
-       rewards = params[:project][:reward].each do |key, value|
-         params[:project][:reward][key][:project_id]=@project.id
-       end
-        success = rewards.each do |key, reward|
+    rewards_param = JSON.parse(params[:project][:reward])
+
+
+    if @project.valid?
+      ActiveRecord::Base.transaction do
+        @project.save
+
+        rewards = rewards_param.each do |reward|
+          reward[:project_id]=@project.id
+        end
+
+        @success = rewards.each do |reward|
           Reward.new(
-            title: reward[:title],
-            description: reward[:description],
-            amount: reward[:amount].to_i,
+            title: reward['title'],
+            description: reward['description'],
+            amount: reward['amount'].to_i,
             project_id: reward[:project_id]
           ).save
         end
+      end
 
-        if success.include?(false)
-          render json: "error creating rewards", status: 500
-        else
-          render "api/projects/show"
-        end
-     else
-       render json: @project.errors.full_messages, status: 422
-     end
+      if @success.include?(false)
+        render json: "error creating rewards", status: 500
+      else
+        render "api/projects/show"
+      end
+    else
+      render json: @project.errors.full_messages, status: 422
+    end
   end
 
   def show

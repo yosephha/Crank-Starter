@@ -13,7 +13,7 @@
 
 class Reward < ApplicationRecord
   validates :amount, numericality: true
-  validates :title, :description, :project, presence: true
+  validates :title, :description, :project_id, presence: true
 
   belongs_to :project
   has_many :contributions

@@ -17,7 +17,7 @@ const categories = [
 class ProjectForm extends React.Component{
   constructor(props) {
     super(props);
-    // debugger
+
     this.state = ({
       title: "",
       description: "",
@@ -27,14 +27,19 @@ class ProjectForm extends React.Component{
       category: "",
       funding_goal: 0,
       project_img_file: null,
-      project_img_url: null
-      // reward: {
-      //   1: { title: "Deafalt", description: "deafalt", amount: 5 }
-      // }
+      project_img_url: null,
+      reward: [{
+         title: "",
+         description: "",
+         amount: 0
+       }]
+
     });
     this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.reward = this.reward.bind(this);
+    this.addReward = this.addReward.bind(this);
   }
 
   componentDidMount(){
@@ -44,7 +49,6 @@ class ProjectForm extends React.Component{
   update(property) {
     return e => this.setState({ [property]: e.target.value });
   }
-  //-----------------AWS Tutorial---------------
 
   updateFile(e) {
     var file = e.currentTarget.files[0];
@@ -67,10 +71,11 @@ class ProjectForm extends React.Component{
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
     var formData = new FormData();
     const category = this.swap_cat(this.props.categories);
-    debugger
+
     formData.append("project[title]", this.state.title);
     formData.append("project[description]", this.state.description);
     formData.append("project[details]", this.state.details);
@@ -79,10 +84,62 @@ class ProjectForm extends React.Component{
     formData.append("project[category_id]", category[this.state.category]);
     formData.append("project[funding_goal]", this.state.funding_goal);
     formData.append("project[project_img]", this.state.project_img_file);
-    // formData.append("project[reward]", this.state.reward);
+    formData.append("project[reward]", JSON.stringify(this.state.reward));
 
     this.props.createProject(formData);
     // this.props.history.push('/');
+  }
+
+  setAmount(index,e){
+    this.state.reward[index].amount=e.target.value;
+  }
+
+  setTitle(index,e){
+    this.state.reward[index].title=e.target.value;
+  }
+
+  setReward(index,e){
+    this.state.reward[index].description=e.target.value;
+  }
+
+
+  addReward(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    let rewards = this.state.reward;
+    rewards.push({
+      title: "",
+      description: "",
+      amount: 0
+    });
+
+    this.setState({reward: rewards});
+  }
+
+  reward() {
+    return (
+      this.state.reward.map((rewards, index) => {
+        return(
+          <div key={index} className="project-description-form">
+          <p className="input-label-description">Reward {index+1}</p>
+          <div className="add-reward-table">
+            <div>
+              <p className="left-column-reward">Title</p>
+              <input type="text" onChange={this.setTitle.bind(this,index)}/>
+            </div>
+            <div>
+              <p className="left-column-reward">Amount</p>
+              <input type="number" onChange={this.setAmount.bind(this,index)}/>
+            </div>
+            <div>
+              <p className="left-column-reward">Description</p>
+              <textarea placeholder="Reward description" onChange={this.setReward.bind(this,index)}></textarea>
+            </div>
+            </div>
+        </div>);
+      })
+    );
   }
 
   //--------------------------------
@@ -258,8 +315,10 @@ class ProjectForm extends React.Component{
                     </ul>
                   </div>
                 </div>
+
               <br />
-                <div className="project-description-form">
+
+              <div className="project-description-form">
                   <div className="input-label-description">
                     <span>End Date</span>
                   </div>
@@ -323,7 +382,11 @@ class ProjectForm extends React.Component{
                 </div>
 
               <br />
-
+                <div className="wrapper">
+                  {this.reward()}
+                  <button onClick={this.addReward}>Add Reward</button>
+                </div>
+              <br />
               <input id="start-project-submit" type='submit' value='Create Project!' />
             </form>
           </div>

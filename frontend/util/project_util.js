@@ -13,7 +13,6 @@ export const fetchProjectDetail = id => (
 );
 
 export const createProject =(project) => {
-  debugger
   return (
     $.ajax({
       method: 'POST',
@@ -24,23 +23,18 @@ export const createProject =(project) => {
     })
   );
 }
-// export const createProject = (formData, project) => (
-//   $.ajax({
-//     method: "POST",
-//     url: "/api/projects",
-//     dataType: "json",
-//     contentType: false,
-//     processData: false,
-//     data: formData,
-//     success: function() {
-//       callback();
-//     }
-//   })
-// );
 
 export const deleteProject = project => (
   $.ajax({
     method: 'DELETE',
     url: `/api/projects/${project.id}`
+  })
+);
+
+export const updateProject = project => (
+  $.ajax({
+    method: 'PATCH',
+    url: `/api/projects/${project.id}`,
+    data: { project }
   })
 );

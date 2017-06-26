@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECIVE_PROJECTS, RECEIVE_PROJECT_DETAIL } from '../actions/project_actions';
+import { RECIVE_PROJECTS, RECEIVE_PROJECT_DETAIL, REMOVE_PROJECT } from '../actions/project_actions';
 
 const defaultState = {};
 
@@ -13,6 +13,10 @@ const ProjectReducer = (state = defaultState, action) => {
     case RECEIVE_PROJECT_DETAIL:
       const newproject = {[action.project.id]: action.project};
       return merge({}, state, newproject);
+    case REMOVE_PROJECT:
+      nextState = merge({}, state);
+      delete nextState[action.project];
+      return nextState;
     default:
       return state;
   }
