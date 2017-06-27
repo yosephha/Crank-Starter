@@ -1,5 +1,4 @@
 .project-show-page {
-  border: 2px solid blue;
   margin-top: 113px;
 }
 // Title and username
@@ -79,11 +78,104 @@ detail-user {
 }
 
 .detail-stats {
-    border: 1px solid;
-    width: 344px;
+  border-top: 2px solid #05AF3C;
+  width: 344px;
+  padding: 25px 0;
 }
 
-.detail-stats {
-    border: 1px solid;
-    width: 344px;
+.show-number{
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 2rem;
+}
+
+.funded-amt{
+  color: #05AF3C;
+}
+
+.show-stat-txt{
+  color: #626369;
+  font-size: 18px;
+  line-height: 1.4rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.back-project-button{
+  background: #05AF3C;
+  padding: 16px 118px;
+  border-radius: 3px;
+  color: white;
+  margin-top: 11px;
+  &:hover{
+    padding-bottom: 14px;
+    box-shadow: 2px 1px 10px #A3A287;
+    background: green;
+  }
+}
+
+.userButtons{
+  display: flex;
+  display: flex;
+  margin-top: 20px;
+}
+
+.show-edit-button{
+  background: white;
+  border-radius: 3px;
+  padding: 12px 56px;
+  margin-right: 25px;
+  box-shadow: 2px 1px 5px #A3A287;
+  &:hover{
+    padding-bottom: 12px;
+    box-shadow: 2px 1px 14px #A3A287;
+  }
+}
+
+.show-delete-button{
+  background: white;
+  border-radius: 3px;
+  padding: 12px 52px;
+  box-shadow: 2px 1px 5px #A3A287;
+  &:hover{
+    padding-bottom: 12px;
+    box-shadow: 2px 1px 14px #A3A287;
+  }
+}
+
+.detail-stats p {
+  font-size: 14px;
+}
+
+.detail-stats p {
+    font-size: 14px;
+    margin-top: 35px;
+}
+
+.show-picture-footer{
+  margin: 7px 50px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.spf{
+  padding: 1px 18px;
+}
+
+.show-about-project {
+  font-size: 18px;
+  display: block;
+  width: 755px;
+  padding: 0 63px;
+}
+
+.show-about-project:first-child {
+  font-size: 24px;
+}
+
+.show-about-title{
+  font-size: 35px;
+  font-family: sans-serif;
+  margin-top: 70px;
 }

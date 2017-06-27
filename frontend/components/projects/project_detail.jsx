@@ -8,6 +8,7 @@ class ProjectDetail extends React.Component {
     super(props);
 
     this.userButtons = this.userButtons.bind(this);
+    this.stats = this.stats.bind(this);
   }
 
   componentDidMount(){
@@ -36,16 +37,60 @@ class ProjectDetail extends React.Component {
       };
       return(
         <span className="userButtons">
-          <Link to={`/projects/${this.props.project.id}/edit`}><button>Edit this project</button></Link> &nbsp;
-          <Link
-            to="/"><button
-            onClick={ destroyProject }
-          >Delete this project</button></Link>
+          <Link to={`/projects/${this.props.project.id}/edit`}>
+            <button className="show-edit-button">
+              <i className="fa fa-pencil-square-o" aria-hidden="true">Edit</i>
+
+            </button>
+          </Link> &nbsp;
+          <Link to="/">
+            <button
+              onClick={ destroyProject }
+              className="show-delete-button"
+            >
+            <i className="fa fa-trash-o" aria-hidden="true">Delete</i>
+            </button>
+          </Link>
         </span>
       );
     } else {
       return "";
     }
+  }
+
+  stats(){
+    const project = this.props.project;
+    return(
+      <div className="detail-stats">
+        <div className="show-amount">
+          <span className="show-number funded-amt">$500</span>
+          <span className="show-stat-txt">
+            pledged of {project.funding_goal} goal
+          </span>
+        </div>
+
+        <div className="show-amount">
+          <span className="show-number">750</span>
+          <span className="show-stat-txt">backers</span>
+        </div>
+
+        <div className="remaining">
+          <span className="show-number">{this.dateRemaining(project.end_date)}</span>
+          {' '}
+          <span className="show-stat-txt">days to go</span>
+        </div>
+        <input
+          type="submit"
+          value="Back this project"
+          className="back-project-button"
+        />
+        {this.userButtons()}
+        <p>
+          All or nothing. This project will only be funded if it reaches its
+          goal by Sat, {project.end_date}
+        </p>
+      </div>
+    );
   }
 
   render(){
@@ -55,7 +100,6 @@ class ProjectDetail extends React.Component {
     return(
       <div className="project-show-page">
         <div>
-          {this.userButtons()}
 
           <div className="detail-user-title">
             <div className="detail-user">
@@ -73,22 +117,18 @@ class ProjectDetail extends React.Component {
             <div className="detail-project-img">
               <img className="detail-img" src={project.project_img} />
             </div>
+            {this.stats()}
+          </div>
+          <div className="show-picture-footer">
+            <i className="fa spf fa-circle-o-notch" aria-hidden="true">Project We Love</i>
+            <i className="fa spf fa-compass" aria-hidden="true">Product Design</i>
+          </div>
 
-            <div className="detail-stats">
-              <div className="pledged">
-                $
-                <span>{project.funding_goal}</span>
-                {' '}
-                <span className="stat-txt">pledged</span>
-              </div>
-
-              <div className="remaining">
-                <span>{this.dateRemaining(project.end_date)}</span>
-                {' '}
-                <span className="stat-txt">days to go</span>
-              </div>
+          <div className="show-about-project">
+            <p className="show-about-title">About this project</p>
+            <div>
+              {project.description}
             </div>
-
           </div>
         </div>
       </div>
