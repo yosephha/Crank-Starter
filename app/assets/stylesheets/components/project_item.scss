@@ -1,10 +1,12 @@
 .project-item {
-  // border: 2px solid black;
   margin: 20px;
   height: 544px;
   width: 355px;
   display: relative;
-  box-shadow: 10px 10px 5px #d0cfcf;
+  box-shadow: 0px 3px 6px #cbc6c6;
+  &:hover{
+    box-shadow: 2px 4px 9px #cbc6c6;
+  }
 }
 
 .project-img {

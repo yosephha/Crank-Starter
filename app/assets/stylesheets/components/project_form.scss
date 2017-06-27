@@ -6,10 +6,11 @@
   display: flex;
   width: 935px;
   // height: 1800px;
-  
+
   background: white;
   border: 1px solid #e4d9d9;
   overflow: hidden;
+  margin: auto;
 }
 
 .main-form{
@@ -180,6 +181,7 @@ h3.start-form-header2 {
     padding: 51px;
     width: 958px;
     font-weight: 300;
+    margin: auto;
 }
 
 select {

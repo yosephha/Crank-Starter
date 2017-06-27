@@ -85,8 +85,10 @@ class ProjectForm extends React.Component{
     formData.append("project[project_img]", this.state.project_img_file);
     formData.append("project[reward]", JSON.stringify(this.state.reward));
 
-    this.props.createProject(formData);
-    // this.props.history.push('/');
+    this.props.createProject(formData)
+    .then((resp) =>  (this.props.history.push(`/projects/${resp.project.id}`))
+  );
+
   }
 
   setAmount(index,e){
@@ -120,7 +122,7 @@ class ProjectForm extends React.Component{
     return (
       this.state.reward.map((rewards, index) => {
         return(
-          <div key={index} className="project-description-form">
+          <div key={index} className="project-description-form reward-form-toggle">
           <p className="input-label-description">Reward {index+1}</p>
 
           <div className="add-reward-table">
@@ -163,7 +165,7 @@ class ProjectForm extends React.Component{
         <div className="inner-form-container">
           <div className="main-form">
             <form onSubmit={this.handleSubmit} >
-              <div className="start-project-img">
+              <div className="start-project-img start-toggle">
                 <div className="input-label">
                   <ul>
                     <li>
@@ -188,7 +190,7 @@ class ProjectForm extends React.Component{
 
               <br />
 
-              <div className="start-project-title">
+              <div className="start-project-title start-toggle" >
                 <div className="input-label-title">
                   <span>Project title</span>
                 </div>
@@ -219,7 +221,7 @@ class ProjectForm extends React.Component{
 
               <br />
 
-              <div className="project-description-form">
+              <div className="project-description-form start-toggle">
                 <div className="input-label-description">
                   <span>Short blurb</span>
                 </div>
@@ -244,7 +246,7 @@ class ProjectForm extends React.Component{
 
               <br />
 
-              <div className="project-description-form">
+              <div className="project-description-form start-toggle">
                 <div className="input-label-description">
                   <span>Website</span>
                 </div>
@@ -268,7 +270,7 @@ class ProjectForm extends React.Component{
 
               <br />
 
-              <div className="project-description-form">
+              <div className="project-description-form start-toggle">
                   <div className="input-label-description">
                     <span>Details</span>
                   </div>
@@ -294,7 +296,7 @@ class ProjectForm extends React.Component{
 
               <br />
 
-              <div className="project-description-form">
+              <div className="project-description-form start-toggle">
                   <div className="input-label-description">
                     <span>Category</span>
                   </div>
@@ -320,7 +322,7 @@ class ProjectForm extends React.Component{
 
               <br />
 
-              <div className="project-description-form">
+              <div className="project-description-form start-toggle">
                   <div className="input-label-description">
                     <span>End Date</span>
                   </div>
@@ -347,7 +349,7 @@ class ProjectForm extends React.Component{
 
               <br />
 
-              <div className="project-description-form">
+              <div className="project-description-form start-toggle">
                   <div className="input-label-description">
                     <span>Funding Goal</span>
                   </div>
@@ -384,7 +386,7 @@ class ProjectForm extends React.Component{
                 </div>
 
               <br />
-                <div className="wrapper">
+                <div className="wrapper reward-form-toggle">
                   {this.reward()}
                   <button className="addReward-button"onClick={this.addReward}>Add Reward</button>
                 </div>

@@ -3,6 +3,7 @@
     json.id project.id
     json.title project.title
     json.description project.description
+    json.details project.details
     json.creator project.creator.username
     json.creator_id project.creator.id
     json.category_id project.category_id
@@ -17,6 +18,7 @@
        reward.contributions.count
     }.reduce(:+)
     json.rewards project.rewards do |reward|
+      json.id reward.id
       json.amount reward.amount
       json.description reward.description
       json.contributions reward.contributions

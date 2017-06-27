@@ -7,6 +7,12 @@ class ProjectIndex extends React.Component {
     this.props.fetchCategories();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(this.props.projects.count !== nextProps.projects.count){
+      this.props.fetchProjects();
+    }
+  }
+
   render() {
     const projects = this.props.projects.map((project) => {
       const category = this.props.categories[project.category_id]

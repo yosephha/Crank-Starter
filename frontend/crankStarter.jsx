@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import { signup, login, logout } from './actions/session_actions';
 import Root from './components/root';
-import { fetchProjects, createProject } from './actions/project_actions';
+import { fetchProjects, createProject, fetchProject } from './actions/project_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchProjects = fetchProjects;
+  window.fetchProject = fetchProject;
   window.createProject = createProject;
   // window.login = login;
   // window.signup = signup;

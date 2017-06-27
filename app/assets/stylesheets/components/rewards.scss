@@ -1,0 +1,29 @@
+.reward-item-container{
+  border: 1px solid #586BE9;
+  background: #f1f3f8;
+  width: 323px;
+  height: 270px;
+  margin: 10px;
+  &:hover{
+    box-shadow: 2px 1px 3px #acdabe;
+    border: 1px solid #2841e6;
+    background: #25CB68;
+  }
+}
+
+.reward-item{
+  padding: 20px;
+}
+
+.reward-item h3 {
+  color: #586BE9;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: sans-serif;
+  margin-bottom: 25px;
+}
+
+.reward-item p {
+  color: #80809E;
+}

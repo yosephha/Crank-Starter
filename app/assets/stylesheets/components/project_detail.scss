@@ -6,6 +6,8 @@
   display: flex;
   width: 100%;
   margin: auto;
+  justify-content: center;
+  width: 1241px;
 }
 
 .detail-user {
@@ -75,6 +77,7 @@ detail-user {
 
 .detail-img-stats{
   display: flex;
+  justify-content: center;
 }
 
 .detail-stats {
@@ -117,7 +120,6 @@ detail-user {
 
 .userButtons{
   display: flex;
-  display: flex;
   margin-top: 20px;
 }
 
@@ -154,9 +156,10 @@ detail-user {
 }
 
 .show-picture-footer{
-  margin: 7px 50px;
+  margin: 11px 0px;
   font-size: 18px;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
+  color: gray;
 }
 
 .spf{
@@ -166,8 +169,16 @@ detail-user {
 .show-about-project {
   font-size: 18px;
   display: block;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.show-about-title-detail{
   width: 755px;
-  padding: 0 63px;
 }
 
 .show-about-project:first-child {
@@ -177,5 +188,13 @@ detail-user {
 .show-about-title{
   font-size: 35px;
   font-family: sans-serif;
-  margin-top: 70px;
+  // margin-top: 70px;
+}
+
+.project-show-main-page{
+  margin: auto;
+}
+
+.show-background-stat-user {
+  background: #ecece6;
 }

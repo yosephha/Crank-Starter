@@ -12,12 +12,14 @@ const mapStateToProps = (state, ownProps) => {
   });
 }
 
-const mapDispatchToProps = dispatch => ({
-  fetchProject: id => dispatch(fetchProject(id)),
-  fetchCategories: () => dispatch(fetchCategories()),
-  fetchProjects: () => dispatch(fetchProjects()),
-  deleteProject: (project) => dispatch(deleteProject(project))
-});
+const mapDispatchToProps = dispatch => {
+  return ({
+    fetchProject: id => dispatch(fetchProject(id)),
+    fetchCategories: () => dispatch(fetchCategories()),
+    fetchProjects: () => dispatch(fetchProjects()),
+    deleteProject: (project) => dispatch(deleteProject(project))
+  });
+}
 
 export default connect(
   mapStateToProps,

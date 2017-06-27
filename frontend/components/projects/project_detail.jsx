@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import { Link } from 'react-router-dom';
+import RewardIndex from './rewards/reward_index.jsx'
 
 class ProjectDetail extends React.Component {
   constructor(props){
@@ -15,6 +16,12 @@ class ProjectDetail extends React.Component {
     this.props.fetchCategories();
     this.props.fetchProject(this.props.match.params.id);
     this.props.fetchProjects();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.projectId !== nextProps.match.params.projectId) {
+      this.props.fetchProject(nextProps.match.params.projectId);
+    }
   }
 
   dateRemaining(end_date){
@@ -32,15 +39,14 @@ class ProjectDetail extends React.Component {
   userButtons() {
     let detailId = this.props.project.creator ? this.props.project.creator_id : 0;
     if (this.props.currentUser && detailId === this.props.currentUser.id) {
-      const destroyProject = () => {
+      const destroyProject = (e) => {
         this.props.deleteProject(this.props.project);
       };
       return(
         <span className="userButtons">
-          <Link to={`/projects/${this.props.project.id}/edit`}>
+          <Link to={`/projects/new`}>
             <button className="show-edit-button">
               <i className="fa fa-pencil-square-o" aria-hidden="true">Edit</i>
-
             </button>
           </Link> &nbsp;
           <Link to="/">
@@ -63,14 +69,14 @@ class ProjectDetail extends React.Component {
     return(
       <div className="detail-stats">
         <div className="show-amount">
-          <span className="show-number funded-amt">$500</span>
+          <span className="show-number funded-amt">${project.funded}</span>
           <span className="show-stat-txt">
             pledged of {project.funding_goal} goal
           </span>
         </div>
 
         <div className="show-amount">
-          <span className="show-number">750</span>
+          <span className="show-number">{project.num_backers}</span>
           <span className="show-stat-txt">backers</span>
         </div>
 
@@ -99,9 +105,9 @@ class ProjectDetail extends React.Component {
     if(this.props.project === undefined) return null;
     return(
       <div className="project-show-page">
-        <div>
-
-          <div className="detail-user-title">
+        <div className="project-show-main-page">
+          <div className="show-background-stat-user">
+            <div className="detail-user-title">
             <div className="detail-user">
               <p className="detail-user-name">
                 By<span>{project.creator}</span>
@@ -112,22 +118,25 @@ class ProjectDetail extends React.Component {
               <p id="descriptionText">{project.description}</p>
             </div>
           </div>
-
-          <div className="detail-img-stats">
+            <div className="detail-img-stats">
             <div className="detail-project-img">
               <img className="detail-img" src={project.project_img} />
+              <div className="show-picture-footer">
+                <i className="fa spf fa-circle-o-notch" aria-hidden="true">Project We Love</i>
+                <i className="fa spf fa-compass" aria-hidden="true">Product Design</i>
+              </div>
             </div>
             {this.stats()}
           </div>
-          <div className="show-picture-footer">
-            <i className="fa spf fa-circle-o-notch" aria-hidden="true">Project We Love</i>
-            <i className="fa spf fa-compass" aria-hidden="true">Product Design</i>
           </div>
 
           <div className="show-about-project">
-            <p className="show-about-title">About this project</p>
+            <div className="show-about-title-detail">
+              <p className="show-about-title">About this project</p>
+              {project.details}
+            </div>
             <div>
-              {project.description}
+              <RewardIndex project={project}/>
             </div>
           </div>
         </div>
