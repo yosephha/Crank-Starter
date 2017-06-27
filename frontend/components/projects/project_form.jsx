@@ -1,19 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-
-const categories = [
-  "Art",
-  "Autos",
-  "Entertainment",
-  "Food",
-  "Music",
-  "Photography",
-  "Productivity",
-  "Sports",
-  "Technology"
-];
-
 class ProjectForm extends React.Component{
   constructor(props) {
     super(props);

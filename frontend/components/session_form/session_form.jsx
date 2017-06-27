@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
 		if (this.props.formType === 'login') {
 			return (
 				<div>
-					<span>New to Clickstarter?</span>&nbsp;&nbsp;
+					<span>New to Crankstarter?</span>&nbsp;&nbsp;
 					<span onClick={this.props.clearErrors}><Link to="/signup"
 							className="link-form">
 							Sign up!

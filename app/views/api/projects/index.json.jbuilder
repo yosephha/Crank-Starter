@@ -12,7 +12,9 @@
     json.funding_goal project.funding_goal
     json.project_img asset_path(project.project_img.url)
     json.funded project.rewards.map { |reward|
-       reward.contributions.count * reward.amount
+      # debugger
+      #  reward.contributions.count * reward.amount
+       reward.contributions.reduce(0){|acc, cont| acc + cont.amount}
     }.reduce(:+)
     json.num_backers project.rewards.map { |reward|
        reward.contributions.count

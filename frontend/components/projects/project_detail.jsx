@@ -2,7 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import { Link } from 'react-router-dom';
-import RewardIndex from './rewards/reward_index.jsx'
+import RewardIndex from './rewards/reward_index.jsx';
+import { Route } from 'react-router-dom';
 
 class ProjectDetail extends React.Component {
   constructor(props){
@@ -62,6 +63,13 @@ class ProjectDetail extends React.Component {
     } else {
       return "";
     }
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+
   }
 
   stats(){
