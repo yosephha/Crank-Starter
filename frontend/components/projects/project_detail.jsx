@@ -74,6 +74,7 @@ class ProjectDetail extends React.Component {
 
   stats(){
     const project = this.props.project;
+
     return(
       <div className="detail-stats">
         <div className="show-amount">
@@ -93,11 +94,11 @@ class ProjectDetail extends React.Component {
           {' '}
           <span className="show-stat-txt">days to go</span>
         </div>
-        <input
-          type="submit"
-          value="Back this project"
-          className="back-project-button"
-        />
+
+        <Link to={`/projects/${project.id}/contribution`} className="back-project-button">
+          Back this project
+        </Link>
+
         {this.userButtons()}
         <p>
           All or nothing. This project will only be funded if it reaches its

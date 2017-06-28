@@ -11,6 +11,7 @@ import PostIndex from './projects/project_index';
 import NewProjectFormContainer from './projects/project_form_container';
 import ProjectDetailContainer from './projects/project_detail_container';
 import ProjectDetail from './projects/project_detail';
+import ContributionIndexContainer from './projects/contributions/contribution_index_container';
 
 const App = () => (
   <div>
@@ -21,6 +22,10 @@ const App = () => (
       <AuthRoute exact path="/login" component={FormContainer} />
       <AuthRoute exact path="/signup" component={FormContainer} />
       <ProtectedRoute exact path="/projects/new" component={NewProjectFormContainer}/>
+      <ProtectedRoute
+        exact path="/projects/:id/contribution"
+        component={ContributionIndexContainer}
+      />
       <Route exact path="/" component={PostIndexContainer} />
       <Route exact path="/projects/:id" component={ProjectDetailContainer} />
     </div>
