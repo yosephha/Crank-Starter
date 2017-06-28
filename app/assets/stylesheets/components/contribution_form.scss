@@ -1,11 +1,39 @@
 .contribution-index-container{
-  border: 1px solid blue;
+  background: white;
   margin-top: 84px;
 }
 
+.contribution-header {
+  background: #F7F5F2;
+  text-align: center;
+  font-family: sans-serif;
+  border-bottom: 1px solid #F1EEEA;
+  padding: 20px;
+}
+
+.contribution-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.contribution-header h4{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contribution-reward-box{
+  background: #f8f9fd;
+  margin: 20px 0;
+  padding: 35px 40px;
+  border: 1px solid blue;
+  &:hover{
+    box-shadow: 10px 3px 33px #a3a2a2;
+    background: #f0f1f8;
+  }
+}
 .contribution-list-container{
   width: 70%;
-  border: 1px solid blue;
   margin: auto;
   padding: 30px;
 }
@@ -13,4 +41,53 @@
 .contribution-list-container{
   width: 650px;
   margin-right: 56px;
+  margin: auto;
+  background: white;
+}
+
+.contribution-reward-details {
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  justify-content: space-between;
+}
+
+.contribution-reward-input {
+  display: flex;
+  margin-top: inherit;
+}
+
+.contribution-reward-right-box {
+    padding-right: 60px;
+}
+
+input.contribution-input {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 6px;
+  width: 74px;
+  border: 1px solid #aeb3d2;
+}
+
+input.contribution-submit-button {
+    background: #05AF3C;
+    margin: 0 20px;
+    border-radius: 6px;
+    padding: 0px 25px;
+    border: 1px solid #cecfd0;
+    color: white;
+}
+
+.c-header{
+  color: blue;
+  font-size: 24px;
+}
+
+.c-gray{
+  color: #6f6363;
+}
+
+.contribution-reward-right-box > span {
+  margin-bottom: 18px;
+  display: block;
 }

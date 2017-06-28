@@ -4,7 +4,6 @@ import { createContribution } from '../../../actions/contribution_action.js';
 import { fetchProject } from '../../../actions/project_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return ({
     currentUser: state.session.currentUser
     // project: state.projects[ownProps.match.id]

@@ -26,7 +26,6 @@ class ContributionForm extends React.Component {
     const reward_amount = this.props.reward.amount;
     const entered_amount = this.state.amount;
 
-    debugger
     if(reward_amount > entered_amount){
       this.setState({amount: reward_amount});
     } else {
@@ -36,23 +35,40 @@ class ContributionForm extends React.Component {
   }
 
   render(){
+
+    const reward = this.props.reward
     return(
-      <div>
-        <p>
-          FormContainer
-        </p>
-        <input
-          type="number"
-          value={this.state.amount}
-          onChange={this.update()}
-          className="contribution-input"
-          />
-        <input
-          type="submit"
-          onClick={this.createContribution}
-          className="contribution-submit-button"
-          value ='contribute'
-          />
+      <div className="contribution-reward-box">
+        <div className="contribution-reward-details">
+          <div className="contribution-reward-left-box">
+            <h3 className="c-header">${reward.amount} or more</h3>
+            <h3>{reward.title}</h3>
+            <p className="c-gray">{reward.description}</p>
+            <p>{reward.contributions.length} <span className="c-gray">backers</span></p>
+          </div>
+          <div className="contribution-reward-right-box">
+            <h4 className="c-gray">Estimated Delivery</h4>
+            <span>Nov 2017</span>
+
+            <h4 className="c-gray">Ships To</h4>
+            <span>Anywhere in the world</span>
+          </div>
+        </div>
+
+        <div className="contribution-reward-input">
+          <input
+            type="number"
+            value={this.state.amount}
+            onChange={this.update()}
+            className="contribution-input"
+            />
+          <input
+            type="submit"
+            onClick={this.createContribution}
+            className="contribution-submit-button"
+            value ='contribute'
+            />
+        </div>
       </div>
       )
   }

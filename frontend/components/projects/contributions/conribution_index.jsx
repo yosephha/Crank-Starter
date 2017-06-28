@@ -10,12 +10,11 @@ class ContributionIndex extends React.Component {
     this.props.fetchProject(this.props.match.params.id);
   }
 
-  // componentWillMount(){
-  //   this.props.fetchProject(this.props.match.params.id);
-  // }
-
   render(){
-    // if (!this.props.project) return null;
+    if (!this.props.project) {
+      return null;
+    } else {
+
 
     const project = this.props.project;
     const userName = this.props.currentUser.username;
@@ -38,6 +37,7 @@ class ContributionIndex extends React.Component {
         </div>
       </div>
     );
+  }
   }
 };
 
