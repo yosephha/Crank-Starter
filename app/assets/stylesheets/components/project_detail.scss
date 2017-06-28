@@ -108,8 +108,9 @@ detail-user {
 .back-project-button{
   background: #05AF3C;
   display: block;
-  padding: 16px 118px;
-  border-radius: 3px;
+  padding: 16px;
+  text-align: center;
+  border-radius: 4px;
   color: white;
   margin-top: 11px;
   &:hover{

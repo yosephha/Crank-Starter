@@ -12,8 +12,9 @@ project = @project
      reward.contributions.count
   }.reduce(:+)
   json.rewards project.rewards do |reward|
-    json.amount reward.amount
     json.id reward.id
+    json.title reward.title
+    json.amount reward.amount
     json.description reward.description
     json.contributions reward.contributions
     json.backers reward.backers

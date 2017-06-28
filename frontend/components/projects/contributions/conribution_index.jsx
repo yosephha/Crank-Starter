@@ -33,6 +33,7 @@ class ContributionIndex extends React.Component {
         </div>
 
         <div className="contribution-list-container">
+          <h2 className="support-this">Support this project</h2>
           {rewards}
         </div>
       </div>

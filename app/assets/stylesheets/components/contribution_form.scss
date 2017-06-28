@@ -22,6 +22,12 @@
   margin-bottom: 10px;
 }
 
+.support-this {
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
 .contribution-reward-box{
   background: #f8f9fd;
   margin: 20px 0;
@@ -83,6 +89,12 @@ input.contribution-submit-button {
   font-size: 24px;
 }
 
+.contribution-reward-left-box h4 {
+    font-size: 19px;
+    color: black;
+    margin: 8px 0px;
+}
+
 .c-gray{
   color: #6f6363;
 }
@@ -90,4 +102,9 @@ input.contribution-submit-button {
 .contribution-reward-right-box > span {
   margin-bottom: 18px;
   display: block;
+}
+
+h4.reward-title {
+  font-size: 21px;
+  color: #80809E
 }

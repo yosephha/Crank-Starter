@@ -15,10 +15,11 @@
        reward.contributions.reduce(0){|acc, cont| acc + cont.amount}
     }.reduce(:+)
     json.num_backers project.rewards.map { |reward|
-       reward.contributions.count
+       reward.contributions.map{|e| e.backer_id}.uniq.count
     }.reduce(:+)
     json.rewards project.rewards do |reward|
       json.id reward.id
+      json.title reward.title
       json.amount reward.amount
       json.description reward.description
       json.contributions reward.contributions

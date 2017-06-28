@@ -42,7 +42,7 @@ class ContributionForm extends React.Component {
         <div className="contribution-reward-details">
           <div className="contribution-reward-left-box">
             <h3 className="c-header">${reward.amount} or more</h3>
-            <h3>{reward.title}</h3>
+            <h4>{reward.title}</h4>
             <p className="c-gray">{reward.description}</p>
             <p>{reward.contributions.length} <span className="c-gray">backers</span></p>
           </div>
