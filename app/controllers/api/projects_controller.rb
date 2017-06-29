@@ -1,6 +1,10 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.includes(:rewards, :category).all
+    if params[:category]
+      @projects = Project.where(category_id: params[:category])
+    else
+      @projects = Project.includes(:rewards, :category).all
+    end
   end
 
   def create

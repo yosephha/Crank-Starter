@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/project_util';
+import * as APIUtilCat from '../util/category_util.js';
 import { receiveErrors } from './error_actions';
 export const RECIVE_PROJECTS = 'RECIVE_PROJECTS';
 export const RECEIVE_PROJECT_DETAIL = 'RECEIVE_PROJECT_DETAIL';
@@ -48,4 +49,9 @@ export const updateProject = project => dispatch => (
 export const deleteProject = project => dispatch => (
   APIUtil.deleteProject(project)
     .then(res => dispatch(removeProject(res)))
+);
+
+export const fetchCategoryProjects = category_id => dispatch => (
+  APIUtilCat.fetchCategoryProjects(category_id)
+    .then(res => dispatch(reciveProjects(res)))
 );

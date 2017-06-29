@@ -9,7 +9,7 @@ class NavBar extends React.Component {
     return(
       <div className="nav-bar-container">
         <div className="left-nav-bar">
-          <Link to="/" className="site-nav__item green-hover">
+          <Link to="/categories" className="site-nav__item green-hover">
             <div className='nav-icon'>
               <i className="fa fa-compass nav-icon compass" aria-hidden="true"></i>
             </div>
