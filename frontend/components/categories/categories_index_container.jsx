@@ -4,10 +4,11 @@ import { fetchCategoryProjects } from '../../actions/project_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
+  
   const categoryId = ownProps.match.params.id;
   return ({
-    category: state.categories[categoryId]
+    category: state.categories[categoryId],
+    projects: state.projects
   });
 }
 

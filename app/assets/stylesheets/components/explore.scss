@@ -1,0 +1,35 @@
+.explore-container{
+  margin-top: 75px;
+  padding: 25px 35px;
+  font-family: sans-serif;
+}
+
+.explore-container ul li a{
+  color: #353535;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-size: 34px;
+  line-height: 3.2rem;
+  &:hover{
+    color: #25CB68
+  }
+}
+
+.explore-green{
+  color: #25CB68;
+  font-size: 19px;
+}
+
+.explore-container h3 {
+  border-bottom: 2px solid #25CB68;
+  padding: 20px 0;
+  margin-bottom: 25px;
+}
+
+.explore-container span {
+  margin-left: 5px;
+}
+
+.filtered-projects{
+  margin-top: 70px;
+}

@@ -25,7 +25,7 @@ class ProjectIndex extends React.Component {
     }, this);
 
     return (
-      <section className ="all-projects">
+      <section className ="filtered-projects">
         <ul className="indexContainer">
           {projects}
         </ul>

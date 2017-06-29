@@ -11,17 +11,18 @@ class Categories extends React.Component {
   render(){
     const categories = this.props.categories.map((category) => {
       return (
-        <li>
+        <li key={category.id}>
           <NavLink to={`/categories/${category.id}`} >
             {category.name}
-            {category.number_of_projects}
           </NavLink>
+            <span className="explore-green">{category.number_of_projects}</span>
       </li>
       );
     });
 
     return (
-      <div>
+      <div className="explore-container">
+        <h3 className="explore-green">Categories</h3>
         <ul>
           {categories}
         </ul>

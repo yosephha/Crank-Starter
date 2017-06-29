@@ -2,28 +2,30 @@ import React from 'react';
 import ProjectItem from '../projects/project_item';
 
 class CategoriesIndex extends React.Component {
-
   componentDidMount(){
-    debugger
-    this.props.fetchCategoryProjects(this.props.match.params.id)
-  }
-
-
-  componentWillReceiveProps(nextProps){
-    debugger
-    if(this.props.location.pathname.slice(9) !== nextProps.match.url.slice(9)) {
-      this.props.requestCategory(nextProps.match.url.slice(9));
-    }
+    this.project = this.props.fetchCategoryProjects(this.props.match.params.id)
   }
 
   render(){
-    debugger
+    if(!this.props.projects) return null;
+
+    const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
+
     return (
-      <div>
-        CCCCCCCata
-      </div>
+      <section className ="all-projects">
+        <ul className="indexContainer">
+          { projects.map(project =>
+            <li key={project.id} className="category-item">
+              <ProjectItem
+                project={project}
+                category={this.props.category}
+            />
+          </li>)}
+        </ul>
+      </section>
     );
-  }
-}
+    }
+ }
+
 
 export default CategoriesIndex;

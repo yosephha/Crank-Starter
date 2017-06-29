@@ -6,7 +6,6 @@ export const fetchCategories = () => (
 );
 
 export const fetchSelectedProjects = (category_id) => {
-  debugger
   return (
     $.ajax({
       method: 'GET',
