@@ -31,7 +31,7 @@ class NavBar extends React.Component {
         </Link>
 
         <div className="right-nav-bar site-nav__item">
-          <Link to="/" className="nav-bar-search">
+          <Link to="/search" className="nav-bar-search">
             <i className="fa fa-search" aria-hidden="true"></i>
           </Link>
 

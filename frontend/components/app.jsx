@@ -19,6 +19,8 @@ import ContributionIndexContainer from './projects/contributions/contribution_in
 import CategoriesContainer from './categories/categories_container';
 import CategoriesIndexContainer from './categories/categories_index_container';
 
+import SearchContainer from './search/searchContainer';
+
 const App = () => (
   <div>
     <header className="header">
@@ -27,15 +29,21 @@ const App = () => (
     <div className="mainPage">
       <AuthRoute exact path="/login" component={FormContainer} />
       <AuthRoute exact path="/signup" component={FormContainer} />
-      <ProtectedRoute exact path="/projects/new" component={NewProjectFormContainer}/>
+
+      <ProtectedRoute
+         exact path="/projects/new"
+         component={NewProjectFormContainer}
+      />
       <ProtectedRoute
         exact path="/projects/:id/contribution"
         component={ContributionIndexContainer}
       />
+
       <Route exact path="/" component={PostIndexContainer} />
       <Route exact path="/categories" component={CategoriesContainer} />
       <Route exact path="/categories/:id" component={CategoriesIndexContainer} />
       <Route exact path="/projects/:id" component={ProjectDetailContainer} />
+      <Route exact path="/search" component={SearchContainer} />
     </div>
   </div>
 );

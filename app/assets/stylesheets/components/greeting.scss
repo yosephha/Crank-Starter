@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.login-signup a, .loggedIn-icon a, button {
+.login-signup a, button {
   display: block;
   padding-left: 26px;
   margin-right: 26px;
@@ -13,7 +13,159 @@
   background: red;
 }
 
-// .login-signup:hover {
-//   border-bottom: 3px solid #2BDE73;
-//   transition: all 0.15s ease;
+// .dropdown {
+//   position: relative;
+//   display: inline-block;
+//   width: 68px;
+//   margin: 15px;
+//   padding-bottom: 0px;
+//   top: -5px;
+//   justify-content: center;
+//   vertical-align: -webkit-baseline-middle;
+//   background: #edecec;
 // }
+//
+// .dropdown-content {
+//   display: none;
+//   position: fixed;
+//   top: 72px;
+//   right: 0;
+//   background-color: white;
+//   border: 1px solid #e6e6e6;
+//   min-width: 365px;
+//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+//   z-index: 3;
+//   font-size: 14px;
+//   text-align: -webkit-auto;
+// }
+//
+// .dropdown:hover .dropdown-content {
+//   display: block;
+// }
+//
+// .dropdown-content:hover {
+//   display: block;
+// }
+//
+// .dropdown-content p {
+//   padding: 12px 24px;
+//   display: block;
+// }
+//
+// .dropdown-content p button {
+//   color: #2752ff;
+//   border: none;
+//   margin-left: 10px;
+//   background-color: #e6e6e6;
+//   font-size: 14px;
+//   transition: all 0.2s ease;
+// }
+//
+// .dropdown-content p button:hover {
+//   color: black;
+//   cursor: pointer;
+//   transition: all 0.2s ease;
+// }
+//
+// .dropdown-content p:last-child {
+//   background-color: #e6e6e6;
+// }
+//
+// .dropdown-content p span {
+//   font-weight: bold;
+// }
+
+.header-group {
+  position: relative;
+}
+
+.header-group img {
+  position: absolute;
+  right: 0px;
+  top: -36px;
+  padding: 10px 24px;
+}
+
+.background {
+  position: absolute;
+  right: 0px;
+  top: -29px;
+  height: 45px;
+  width: 165px;
+  background-color: #fffbfb;
+}
+
+.dropbtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 154px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  top: 72px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  min-width: 365px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  font-size: 14px;
+  text-align: -webkit-auto;
+}
+
+/* Links inside the dropdown */
+.dropdown-content p {
+  padding: 12px 24px;
+  display: block;
+}
+
+.dropdown-content p:last-child {
+  text-align: left;
+}
+
+.dropdown-content p button {
+  color: #2752ff;
+  border: none;
+  margin-left: 10px;
+  background-color: #e6e6e6;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content p button:hover {
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .background {
+  background-color: #bfbfbf;
+  opacity: 0.1;
+}
+
+.dropdown-content p:last-child {
+  background-color: #e6e6e6;
+}
+
+.dropdown-content p span {
+  font-weight: bold;
+}

@@ -8,5 +8,6 @@ Rails.application.routes.draw do
       resources :contributions, only: [:create]
     end
     resources :categories, only: [:index]
+    resources :search, only: [:index]
   end
 end

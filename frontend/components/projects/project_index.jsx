@@ -1,5 +1,6 @@
 import React from 'react';
-import ProjectItem from './project_item'
+import ProjectItem from './project_item';
+import Carousel from './carousel.jsx';
 
 class ProjectIndex extends React.Component {
   componentDidMount(){
@@ -25,7 +26,8 @@ class ProjectIndex extends React.Component {
     }, this);
 
     return (
-      <section className ="filtered-projects">
+      <section className ="all-projects">
+        <Carousel />
         <ul className="indexContainer">
           {projects}
         </ul>

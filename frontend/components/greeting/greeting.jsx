@@ -9,9 +9,15 @@ const sessionLinks = (clearErrors) => (
 );
 
 const personalGreeting = (currentUser, logout) => (
-  <div className="loggedIn-icon">
-    <Link to="/">{currentUser.username}!</Link>
-    <button className="header-button" onClick={logout}>Log Out</button>
+  <div className="dropdown">
+    <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497820642/Stock/avatar_nqzvi4.png"
+      alt="User icon" className="dropbtn" />
+
+    <div className="dropdown-content">
+      <div className="background" />
+      <p>You're logged in as <span>{currentUser.username}</span>
+      <button className="header-button" onClick={logout}>Log Out</button></p>
+    </div>
   </div>
 );
 
