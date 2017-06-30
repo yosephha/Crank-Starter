@@ -208,7 +208,7 @@ r01 = Reward.create(amount: 10, title: 'Contactless Sleep Tracker Basic',
 
 r02 = Reward.create(amount: 10, title: 'Contactless Sleep Tracker Basic',
      description: 'Save: $50 (Retail: $129) 1 x Circadia Sleep Tracker + iOS or Android Mobile app',
-     project_id: p2.id)
+     project_id: p1.id)
 
 r03 = Reward.create(amount: 10, title: 'Contactless Sleep Tracker Basic',
      description: 'Save: $50 (Retail: $129) 1 x Circadia Sleep Tracker + iOS or Android Mobile app',
@@ -253,7 +253,7 @@ r12 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
         heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
-     project_id: p2.id)
+     project_id: p1.id)
 r13 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
         heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
@@ -310,7 +310,7 @@ r22 = Reward.create(amount: 1000, title: 'GET CUBETTO (Early Bird)',
     of little coders. It's powered by a Montessori approved coding language you
     can touch, inspired by the LOGO Turtles of yesteryears, and it works without
     the need for screens or literacy!",
-    project_id: p2.id)
+    project_id: p1.id)
 
 r23 = Reward.create(amount: 1000, title: 'GET CUBETTO (Early Bird)',
     description: "You get Cubetto (With $30 off our retail price). A new learning
