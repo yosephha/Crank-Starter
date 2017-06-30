@@ -49,20 +49,20 @@ p1 = Project.create(
     project_img: "https://cdn.pixabay.com/photo/2017/04/19/13/17/computer-2242266_1280.jpg"
     )
 
-  p2 = Project.create(
-    title: "Minimalist sneakers made with the finest materials | Lenger",
-    website: 'www.yeeze.com',
-    description: 'Rethinking luxury sneakers with a meticulous design at a fair price',
-    end_date: '07/10/2017',
-    funding_goal: 1000000,
-    details: "We're launching a pair of minimalist sneakers made in Portugal with Italian
-      premium materials. Inspired by scandinavian fashion, stitches are hidden to the maximum
-      and the same monochromatic color is used for leather & sole. Last but not least, by offering
-      them via pre-orders we're able to cut logistic costs and retailer margins to offer it at a
-      third of its retail price!",
-    creator_id: user5.id,
-    category_id: art.id,
-    project_img: "http://www.adidas.com/com/apps/bmje17so/vp_assets/images/350-v2/white-black/adidas_YEEZY_350_V2_WB_Lateral_Left.jpg?env=&v=20.07")
+  # p2 = Project.create(
+  #   title: "Minimalist sneakers made with the finest materials | Lenger",
+  #   website: "www.yeeze.com",
+  #   description: 'Rethinking luxury sneakers with a meticulous design at a fair price',
+  #   end_date: "07/10/2017",
+  #   funding_goal: 1000000,
+  #   details: "We're launching a pair of minimalist sneakers made in Portugal with Italian
+  #     premium materials. Inspired by scandinavian fashion, stitches are hidden to the maximum
+  #     and the same monochromatic color is used for leather & sole. Last but not least, by offering
+  #     them via pre-orders we're able to cut logistic costs and retailer margins to offer it at a
+  #     third of its retail price!",
+  #   creator_id: user5.id,
+  #   category_id: art.id,
+  #   project_img: "http://www.adidas.com/com/apps/bmje17so/vp_assets/images/350-v2/white-black/adidas_YEEZY_350_V2_WB_Lateral_Left.jpg?env=&v=20.07")
 
 
   p3 = Project.create(
