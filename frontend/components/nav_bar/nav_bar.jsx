@@ -26,7 +26,7 @@ class NavBar extends React.Component {
 
         <Link to="/" className="nav-bar-logo site-nav__item">
           <span id="logo">
-            <span className="crank">Crank</span>starter
+            Crank<span className="crank">starter</span>
           </span>
         </Link>
 

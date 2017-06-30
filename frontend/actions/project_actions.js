@@ -46,10 +46,12 @@ export const updateProject = project => dispatch => (
     }).fail(err => dispatch(receiveProjectErrors(err.responseJSON)))
 );
 
-export const deleteProject = project => dispatch => (
-  APIUtil.deleteProject(project)
-    .then(res => dispatch(removeProject(res)))
-);
+export const deleteProject = project => dispatch => {
+  return (
+    APIUtil.deleteProject(project)
+      .then(res => dispatch(removeProject(res)))
+  );
+}
 
 export const fetchCategoryProjects = category_id => dispatch => (
   APIUtilCat.fetchCategoryProjects(category_id)

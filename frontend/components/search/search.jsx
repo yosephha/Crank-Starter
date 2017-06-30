@@ -64,7 +64,8 @@ class Search extends React.Component {
             placeholder="Search"
           />
 
-        <NavLink to="/" className="close-search">
+
+          <NavLink to="/" className="close-search">
             <i className="fa close-search fa-times" aria-hidden="true"></i>
           </NavLink>
         </div>

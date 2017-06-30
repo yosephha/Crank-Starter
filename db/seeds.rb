@@ -8,12 +8,12 @@
 User.destroy_all
 # Users
 user1 = User.create(username: 'user', password: 'password')
-user2 = User.create(username: 'yoseph', password: '123456')
-user3 = User.create(username: 'steveJobs', password: '123password')
-user4 = User.create(username: 'bob', password: 'dontusepassword')
-user5 = User.create(username: 'billGates', password: 'passwordisabadpassword')
-user6 = User.create(username: 'elon', password: 'password')
-user7 = User.create(username: 'potter', password: '12345password')
+user2 = User.create(username: 'Yoseph', password: '123456')
+user3 = User.create(username: 'SteveJobs', password: '123password')
+user4 = User.create(username: 'Bob', password: 'dontusepassword')
+user5 = User.create(username: 'BillGates', password: 'passwordisabadpassword')
+user6 = User.create(username: 'Elon', password: 'password')
+user7 = User.create(username: 'Potter', password: '12345password')
 
 Category.destroy_all
 #categories
@@ -50,7 +50,7 @@ p1 = Project.create(
     )
 
   p2 = Project.create(
-    title: 'Minimalist sneakers made with the finest materials | Lenger',
+    title: "Minimalist sneakers made with the finest materials | Lenger",
     website: 'www.yeeze.com',
     description: 'Rethinking luxury sneakers with a meticulous design at a fair price',
     end_date: '07/10/2017',
@@ -181,6 +181,23 @@ p9 = Project.create(
     category_id: music.id,
     project_img: "https://2dbdd5116ffa30a49aa8-c03f075f8191fb4e60e74b907071aee8.ssl.cf1.rackcdn.com/3001816_1422037466.9019.jpg")
 
+p10 = Project.create(
+    title: "Kickstarter Gold: VIDERE 35mm DIY pinhole camera kit",
+    website: 'www.coldgess.com',
+    description: "Put down your phone and reconnect with the physical experience of analogue photography with the VIDERE 35mm pinhole camera kit!",
+    end_date: '07/08/2017',
+    funding_goal: 15000  ,
+    details: "A pinhole camera is a simple camera that uses a single small aperture - a pinhole - instead of a lens. Dating back to the 1880s,
+        the simple and ingenious process of pinhole photography involves exposure of film using light filtered through a small hole in a
+        light-proof box. light passes through this hole, an image is exposed onto the film loaded inside the camera. Exposure times are
+        typically longer than with a normal lensed camera, due to the aperture being so much smaller. This means that pinhole cameras can
+        typically take anywhere from a few seconds to a couple of hours to expose a photograph. Because of these long exposures the shutter
+        is usually manually operated. It strips complex photographic concepts down to their basic foundation: Light. How much to let in,
+        and for how long!",
+    creator_id: user4.id,
+    category_id: photography.id,
+    project_img: "http://camy.premiumcoding.com/wp-content/uploads/2012/03/old-school-camera.jpg")
+
 
 Reward.destroy_all
 # Rewards
@@ -220,6 +237,10 @@ r08 = Reward.create(amount: 10, title: 'Contactless Sleep Tracker Basic',
 r09 = Reward.create(amount: 10, title: 'Contactless Sleep Tracker Basic',
      description: 'Save: $50 (Retail: $129) 1 x Circadia Sleep Tracker + iOS or Android Mobile app',
      project_id: p9.id)
+
+r10 = Reward.create(amount: 10, title: 'Contactless Sleep Tracker Basic',
+     description: 'Save: $50 (Retail: $129) 1 x Circadia Sleep Tracker + iOS or Android Mobile app',
+     project_id: p10.id)
 
 # reward 2
 
@@ -268,6 +289,11 @@ r19 = Reward.create(amount: 100, title: 'Personalised Storybook',
         heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.",
      project_id: p9.id)
+r110 = Reward.create(amount: 100, title: 'Personalised Storybook',
+     description: "A beautifully printed storybook with your child as an illustrated
+        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        gift that reads well even without having a Cubetto Playset.",
+     project_id: p10.id)
 
 
 
@@ -341,6 +367,14 @@ r29 = Reward.create(amount: 1000, title: 'GET CUBETTO (Early Bird)',
     can touch, inspired by the LOGO Turtles of yesteryears, and it works without
     the need for screens or literacy!",
     project_id: p9.id)
+
+r210 = Reward.create(amount: 1000, title: 'GET CUBETTO (Early Bird)',
+    description: "You get Cubetto (With $30 off our retail price). A new learning
+    toy that makes coding tangible, fun and age appropriate for a new generation
+    of little coders. It's powered by a Montessori approved coding language you
+    can touch, inspired by the LOGO Turtles of yesteryears, and it works without
+    the need for screens or literacy!",
+    project_id: p10.id)
 
 # contributions
 Contribution.destroy_all
