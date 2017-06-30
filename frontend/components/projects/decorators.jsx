@@ -7,7 +7,7 @@ const Decorators = [
         return (
           <button
             style={this.getButtonStyles(this.props.currentSlide === 0 && !this.props.wrapAround)} >
-            <img src="https://www.shareicon.net/data/64x64/2015/10/18/658096_bracket_512x512.png"
+            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/Stock/left_qdsoo8.png"
               id="leftButton" onClick={this.handleClick} />
           </button>
         );
@@ -35,7 +35,7 @@ const Decorators = [
         return (
           <button
             style={this.getButtonStyles(this.props.currentSlide + this.props.slidesToScroll >= this.props.slideCount && !this.props.wrapAround)} >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OCR-A_char_Greater-Than_Sign.svg/848px-OCR-A_char_Greater-Than_Sign.svg.png"
+            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/Stock/right_kamca8.png"
               id="rightButton" onClick={this.handleClick} />
           </button>
         );

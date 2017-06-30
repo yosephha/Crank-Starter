@@ -23,10 +23,13 @@ const ProjectItem = (props) => {
   const modified = (props.project.title + description).length < 125 ?
     description : description.slice(0, 125 - props.project.title.length) + "...";
 
+  const percent = calculatePercent();
+
   let categoryName = '';
   if(props.category){
     categoryName = props.category.name
   }
+
   return(
     <div className="project-item">
       <Link to={`/projects/${props.project.id}`} className="project-img">
@@ -48,11 +51,11 @@ const ProjectItem = (props) => {
         </div>
 
         <div className="author">
-          <i className="fa fa-user-circle-o user-icon" aria-hidden="true"></i>
+          <i className="fa fa-user-o" aria-hidden="true"></i>
           by: {' '}
           <span>{props.project.creator}</span>
         </div>
-        <Line percent="60" strokeWidth="2" strokeColor="#2BDE73" />
+        <Line percent={percent} strokeWidth="2" strokeColor="#2BDE73" />
         <div className="pledged">
           $
           <span>{props.project.funding_goal}</span>

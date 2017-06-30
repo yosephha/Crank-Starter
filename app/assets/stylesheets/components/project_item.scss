@@ -70,3 +70,21 @@
 .pledged, .funded, .remaining {
   padding: 3px;
 }
+
+.view-proj-button{
+  position: absolute;
+  margin-top: 356px;
+  display: block;
+  color: white;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.view-proj-button button {
+  background: #25CB68;
+  color: white;
+  padding: 15px;
+  border-radius: 7px;
+}

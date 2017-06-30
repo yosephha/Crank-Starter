@@ -9,3 +9,45 @@
 .all-projects{
   margin-top: 65px;
 }
+
+.project-carousel-slide {
+  background-color: black;
+
+  img {
+    max-height: 550px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-bottom: 1px solid #e6e6e6;
+    opacity: 0.5;
+  }
+}
+
+.project-carousel-slide h1 {
+  position: absolute;
+  margin: 159px 0px;
+  display: block;
+  width: 100%;
+  text-align: -webkit-center;
+  color: white;
+  font-size: 70px;
+  font-family: serif;
+  z-index: 2;
+}
+
+.project-carousel-slide h2 {
+  position: absolute;
+  margin: 272px 0px;
+  width: 100%;
+  text-align: -webkit-center;
+  font-size: 32px;
+  color: white;
+}
+
+img#leftButton {
+    width: 51px;
+}
+
+img#rightButton {
+  width: 50px;
+}
