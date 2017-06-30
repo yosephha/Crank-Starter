@@ -363,7 +363,7 @@ class ProjectForm extends React.Component{
                       </li>
                       <li className="rand-text">
                         <p >
-                          Funding on Kickstarter is all-or-nothing. It’s okay to
+                          Funding on crankstarter is all-or-nothing. It’s okay to
                           raise more than your goal, but if your goal isn’t met,
                           no money will be collected. Your goal should reflect
                           the minimum amount of funds you need to complete your
@@ -373,7 +373,7 @@ class ProjectForm extends React.Component{
                         <p>
                           If your project is successfully funded, the following
                           fees will be collected from your funding total:
-                          Kickstarter’s 5% fee, and payment processing fees
+                          crankstarter’s 5% fee, and payment processing fees
                           (between 3% and 5%). If funding isn’t successful,
                           there are no fees.
                         </p>

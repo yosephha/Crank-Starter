@@ -37,7 +37,7 @@ p1 = Project.create(
                   Made of quality materials and thoughtful details.",
     end_date: '07/08/2017',
     funding_goal: 20000,
-    details: "Hey Kickstarter! We are back with a new project: Panobook, a notebook
+    details: "Hey crankstarter! We are back with a new project: Panobook, a notebook
             for your desk, and eventually, your shelf. Here is Panobook, in a nutshell:
             The unique panoramic format (160 mm x 288 mm) is designed to sit nicely on your desk, either in front of, behind, to next to you keyboard.
             Each page contains a subtle dot grid, with guide markers to help with layout.
@@ -101,7 +101,7 @@ p5 = Project.create(
                   achievements, civilization and overcoming the odds. Choose how you Rise.",
     end_date: '19/09/2017',
     funding_goal: 10000,
-    details: "Hey Kickstarter! We are back with a new project: Panobook, a notebook
+    details: "Hey crankstarter! We are back with a new project: Panobook, a notebook
             for your desk, and eventually, your shelf. Here is Panobook, in a nutshell:
             The unique panoramic format (160 mm x 288 mm) is designed to sit nicely on your desk, either in front of, behind, to next to you keyboard.
             Each page contains a subtle dot grid, with guide markers to help with layout.
@@ -120,7 +120,7 @@ p6 = Project.create(
     end_date: '19/12/2017',
     funding_goal: 150000,
     details: "Welcome to Lifepack: The Hustle Collection. In 2016 we launched Lifepack on
-              Kickstarter and raised $613,917 USD. To date we’ve shipped over 15,000 bags
+              crankstarter and raised $613,917 USD. To date we’ve shipped over 15,000 bags
               all over the world. We’ve listened to your feedback, and now we’re back - with
               The Hustle Collection.If you’re grinding to get ahead: these bags have
               been designed to help you work smarter and harder.",
@@ -182,7 +182,7 @@ p9 = Project.create(
     project_img: "https://2dbdd5116ffa30a49aa8-c03f075f8191fb4e60e74b907071aee8.ssl.cf1.rackcdn.com/3001816_1422037466.9019.jpg")
 
 p10 = Project.create(
-    title: "Kickstarter Gold: VIDERE 35mm DIY pinhole camera kit",
+    title: "crankstarter Gold: VIDERE 35mm DIY pinhole camera kit",
     website: 'www.coldgess.com',
     description: "Put down your phone and reconnect with the physical experience of analogue photography with the VIDERE 35mm pinhole camera kit!",
     end_date: '07/08/2017',
@@ -246,52 +246,52 @@ r10 = Reward.create(amount: 10, title: 'Contactless Sleep Tracker Basic',
 
 r11 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
      project_id: p1.id)
 r12 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
      project_id: p2.id)
 r13 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
      project_id: p3.id)
 r14 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
      project_id: p4.id)
 r15 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
      project_id: p5.id)
 r16 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
      project_id: p6.id)
 r17 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: 'A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.',
      project_id: p7.id)
 r18 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: "A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.",
      project_id: p8.id)
 r19 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: "A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.",
      project_id: p9.id)
 r110 = Reward.create(amount: 100, title: 'Personalised Storybook',
      description: "A beautifully printed storybook with your child as an illustrated
-        heroine/hero in their own Kickstarter-exclusive adventure. A unique, tangible
+        heroine/hero in their own crankstarter-exclusive adventure. A unique, tangible
         gift that reads well even without having a Cubetto Playset.",
      project_id: p10.id)
 
