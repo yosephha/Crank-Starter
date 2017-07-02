@@ -122,8 +122,10 @@ class ProjectDetail extends React.Component {
           <div className="show-background-stat-user">
             <div className="detail-user-title">
             <div className="detail-user">
+              <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497820642/Stock/avatar_nqzvi4.png"
+                alt="User icon" className="user-icon-detail" />
               <p className="detail-user-name">
-                By<span>{project.creator}</span>
+                By <span>{project.creator}</span>
               </p>
             </div>
             <div className="display-title">
@@ -134,10 +136,6 @@ class ProjectDetail extends React.Component {
             <div className="detail-img-stats">
             <div className="detail-project-img">
               <img className="detail-img" src={project.project_img} />
-              <div className="show-picture-footer">
-                <i className="fa spf fa-circle-o-notch" aria-hidden="true">Project We Love</i>
-                <i className="fa spf fa-compass" aria-hidden="true">Product Design</i>
-              </div>
             </div>
             {this.stats()}
           </div>
