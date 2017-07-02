@@ -21,11 +21,7 @@
   text-decoration: none;
   flex-shrink: 0;
   overflow: hidden;
-  padding: 12px;
-}
-
-.site-nav__item:hover {
-  // border-bottom: 2px solid white;
+  padding: 20px;
 }
 
 .left-nav-bar, .right-nav-bar{
@@ -62,7 +58,32 @@
   font-size: 17px;
 }
 
+.nav-bar-explore span {
+  color: black;
+  margin-left: 10px;
+}
+
 #logo {
   font-size: 27px;
   border-radius: 61px;
+}
+
+.nav-bar-start{
+  padding-top: 25px;
+}
+
+.green-hover:hover{
+  color: #25CB68;
+}
+
+.green-hover{
+  display: block;
+}
+
+.explore{
+  padding-top: 22px;
+}
+
+.explore span{
+  margin-left: 10px;
 }

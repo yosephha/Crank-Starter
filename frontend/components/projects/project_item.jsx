@@ -25,7 +25,7 @@ const ProjectItem = (props) => {
 
   const cal_percent = calculatePercent();
   const percent = cal_percent > 100 ? 100 : cal_percent;
-  
+
   let categoryName = '';
   if(props.category){
     categoryName = props.category.name
@@ -52,7 +52,8 @@ const ProjectItem = (props) => {
         </div>
 
         <div className="author">
-          <i className="fa fa-user-o" aria-hidden="true"></i>
+          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497820642/Stock/avatar_nqzvi4.png"
+            alt="User icon" className="user-icon-item" />
           by: {' '}
           <span>{props.project.creator}</span>
         </div>
