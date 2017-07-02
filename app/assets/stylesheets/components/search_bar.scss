@@ -12,25 +12,26 @@
   position: fixed;
   top: 0;
   z-index: 1;
+  justify-content: space-between;
 }
 
 .close-search{
   z-index: 1;
 }
 
-
 .search-bar .fa-search{
-  padding: 22px;
-  font-size: 19px;
-  margin-left: 80px;
-  color: #4c4b4b
+  padding: 20px 0px;
+  font-size: 16px;
+  margin-left: 99px;
+  color: #4c4b4b;
+  margin-top: 7px;
 }
 
 .close-search {
-  margin-left: 330px;
   padding: 25px;
-  font-size: 22px;
-  color: #4c4b4b
+  font-size: 18px;
+  color: #4c4b4b;
+  margin-right: 12%;
 }
 
 .close-search > .fa-times{
@@ -39,9 +40,13 @@
   padding: 0;
 }
 
-.search-bar > input{
-  font-size: 26px;
+.search-bar > div >input{
+  font-size: 19px;
   width: 350px;
   border: none;
   background: #fffbfb;
+}
+
+.search-bar-left{
+  display: flex;
 }

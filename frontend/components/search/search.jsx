@@ -56,14 +56,16 @@ class Search extends React.Component {
     return (
       <div className="search-index">
         <div className="search-bar">
-          <i className="fa fa-search" aria-hidden="true"></i>
+          <div className="search-bar-left">
+            <i className="fa fa-search" aria-hidden="true"></i>
 
-          <input type="text"
-            value={this.state.username}
-            onChange={this.update("searchRes")}
-            placeholder="Search"
-          />
-
+            <input type="text"
+              value={this.state.username}
+              onChange={this.update("searchRes")}
+              placeholder="Search"
+              autoFocus={true}
+            />
+          </div>
 
           <NavLink to="/" className="close-search">
             <i className="fa close-search fa-times" aria-hidden="true"></i>

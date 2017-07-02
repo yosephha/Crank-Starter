@@ -1,15 +1,14 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-
-
-const RewardItem = ({reward}) => {
+const RewardItem = ({reward, pid}) => {
 
   const description = reward.description ? reward.description : "";
   const modified = (description).length < 125 ?
     description : description.slice(0, 125) + "...";
 
   return (
-    <div className="reward-item-container">
+    <NavLink to={`/projects/${pid}/contribution`} className="reward-item-container">
       <div className="reward-item">
         <h3>Pledge ${reward.amount} or more</h3>
         <h4 className="reward-title">{reward.title}</h4>
@@ -20,7 +19,7 @@ const RewardItem = ({reward}) => {
           {reward.contributions.length} <span>backers</span>
         </p>
       </div>
-    </div>
+    </NavLink>
   );
 }
 
