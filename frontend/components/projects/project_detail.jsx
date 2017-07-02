@@ -11,12 +11,14 @@ class ProjectDetail extends React.Component {
 
     this.userButtons = this.userButtons.bind(this);
     this.stats = this.stats.bind(this);
+    this.deleteProject = this.deleteProject.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchCategories();
     this.props.fetchProject(this.props.match.params.id);
     this.props.fetchProjects();
+    window.scroll(0,0)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,17 +34,17 @@ class ProjectDetail extends React.Component {
     );
   }
 
-
   numberWithCommas(x){
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  }
+
+  deleteProject(e){
+    this.props.deleteProject(this.props.project);
   }
 
   userButtons() {
     let detailId = this.props.project.creator ? this.props.project.creator_id : 0;
     if (this.props.currentUser && detailId === this.props.currentUser.id) {
-      const destroyProject = (e) => {
-        this.props.deleteProject(this.props.project);
-      };
       return(
         <span className="userButtons">
           <Link to={`/projects/new`}>
@@ -52,7 +54,7 @@ class ProjectDetail extends React.Component {
           </Link> &nbsp;
           <Link to="/">
             <button
-              onClick={ destroyProject }
+              onClick={this.deleteProject}
               className="show-delete-button"
             >
             <i className="fa fa-trash-o" aria-hidden="true">Delete</i>
@@ -68,15 +70,17 @@ class ProjectDetail extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     e.stopPropagation();
-
-
   }
 
   stats(){
     const project = this.props.project;
 
+    const cal_percent = Math.floor(project.funded / project.funding_goal * 100)
+    const percent = cal_percent > 100 ? 100 : cal_percent;
+
     return(
       <div className="detail-stats">
+        <Line className="stats-bar-show" percent={percent} strokeWidth="1" strokeColor="#2BDE73" />
         <div className="show-amount">
           <span className="show-number funded-amt">${project.funded}</span>
           <span className="show-stat-txt">

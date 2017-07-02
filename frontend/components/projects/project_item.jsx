@@ -23,8 +23,9 @@ const ProjectItem = (props) => {
   const modified = (props.project.title + description).length < 125 ?
     description : description.slice(0, 125 - props.project.title.length) + "...";
 
-  const percent = calculatePercent();
-
+  const cal_percent = calculatePercent();
+  const percent = cal_percent > 100 ? 100 : cal_percent;
+  
   let categoryName = '';
   if(props.category){
     categoryName = props.category.name

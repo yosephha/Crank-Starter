@@ -81,9 +81,9 @@ detail-user {
 }
 
 .detail-stats {
-  border-top: 2px solid #05AF3C;
   width: 344px;
   padding: 25px 0;
+  position: relative;
 }
 
 .show-number{
@@ -199,4 +199,9 @@ detail-user {
 
 .show-background-stat-user {
   background: #ecece6;
+}
+
+svg.rc-progress-line.stats-bar-show {
+    position: absolute;
+    margin: -27px 0;
 }
