@@ -22,7 +22,7 @@ Crank Starter is a web application inspired by Kick Starter, a crowd-funding web
 - Requires users to be logged in to start a project and make contributions
 
 ### Projects
-- When the Index page loads it makes an AJAX request to fetch all the projects from the DB. It fetches necessary information for displaying the tile.
+- When the Index page loads it makes an AJAX request to fetch all the projects. As the controller receives the request it builds a JSON of all the necessary attributes and associations for displaying the tile.
 
 - Starting a project asks for all required fields of the project and all rewards associated with it. It then creates both in one request
 
