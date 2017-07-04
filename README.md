@@ -42,5 +42,5 @@ Crank Starter is a web application inspired by Kick Starter, a crowd-funding web
 - [ ] Credit card payments
 
 [heroku]: https://crankstarter.herokuapp.com
-[index]: .app/assets/images/landing_page.png
-[giphy]: .app/assets/images/search.gif
+[index]: ./app/assets/images/landing_page.png
+[giphy]: ./app/assets/images/search.gif
