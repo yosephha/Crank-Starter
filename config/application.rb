@@ -11,26 +11,13 @@ module CrankStarter
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-
-    # config.paperclip_defaults = {
-    #   :storage => :s3,
-    #   :s3_credentials => {
-    #     :bucket => ENV["s3_bucket"],
-    #     :access_key_id => ENV["s3_access_key_id"],
-    #     :secret_access_key => ENV["s3_secret_access_key"],
-    #     :s3_region => ENV["s3_region"]
-    #   }
-    # }
-
     config.paperclip_defaults = {
-      storage: :s3,
-      s3_region: Figaro.env.s3_region,
-      s3_credentials: {
-        bucket: Figaro.env.s3_bucket,
-        access_key_id: Figaro.env.s3_access_key_id,
-        secret_access_key: Figaro.env.s3_secret_access_key,
-        s3_host_name: "S3-#{Figaro.env.s3_region}.amazonaws.com",
-        url: ":s3_host_name"
+      :storage => :s3,
+      :s3_credentials => {
+        :bucket => ENV["s3_bucket"],
+        :access_key_id => ENV["s3_access_key_id"],
+        :secret_access_key => ENV["s3_secret_access_key"],
+        :s3_region => ENV["s3_region"]
       }
     }
   end
