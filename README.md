@@ -5,6 +5,8 @@
 
 Crank Starter is a web application inspired by Kick Starter, a crowd-funding web application, built using Ruby on Rails and React/Redux. By June 30, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
+![Clickstarter index][index]
+
 ## Features
 - Account creation and authentication with demo login
 - Creating and deleting projects
@@ -21,8 +23,6 @@ Crank Starter is a web application inspired by Kick Starter, a crowd-funding web
 
 ### Projects
 - When the Index page loads it makes an AJAX request to fetch all the projects from the DB. It fetches necessary information for displaying the tile.
-
-![Clickstarter index][index]
 
 - Starting a project asks for all required fields of the project and all rewards associated with it. It then creates both in one request
 
@@ -43,4 +43,4 @@ Crank Starter is a web application inspired by Kick Starter, a crowd-funding web
 
 [heroku]: https://crankstarter.herokuapp.com
 [index]: ./app/assets/images/landing_page.png
-[giphy]: ./app/assets/images/search.gif
+[giphy]: ./app/assets/images/search_gif.gif
