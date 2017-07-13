@@ -12,10 +12,10 @@ const nukaCarousel = () => (
     </div>
 
     <div className="project-carousel-slide">
-      <h1>Tiger + Man's Debut Music Videos.</h1>
+      <h1>Man's Debut Music Videos</h1>
       <h2>Lead your prehistoric Tribe to victory through discovery, achievements and civilization</h2>
       <a href="#/projects/4"><button>View project</button></a>
-      <img src="/assets/tiger-c5b77d71a70703eb3fa10aa7473bdd74fe38a8d3836edef61c95ef251737bd10.jpg" />
+      <img src="http://t.wallpaperweb.org/wallpaper/nature/1920x1080/ps3_hq_image_3451920x1080.jpg" />
     </div>
 
     <div className="project-carousel-slide">
