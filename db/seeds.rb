@@ -78,7 +78,7 @@ p1 = Project.create(
       of a bike getting stolen, as it become a lot more suspicious to carry an alarming bike!",
 
     creator_id: user6.id, category_id: autos.id,
-    project_img: "https://heavyeditorial.files.wordpress.com/2017/02/tigr-mini-lightweight-titanium-bicycle-lock1.jpg?quality=65&strip=all")
+    project_img: "https://img3.rnkr-static.com/list_img_v2/9304/829304/full/the-best-mountain-bike-brands-u1.jpg")
 
   p4 = Project.create(
     title: "Tiger + Man's Debut Music Videos", website: 'www.startup.com',
@@ -142,25 +142,25 @@ p7 = Project.create(
     category_id: tech.id,
     project_img: "https://i0.wp.com/www.lazyfeed.com/wp-content/uploads/2017/01/banner11.jpg?resize=1024%2C288")
 
-p8 = Project.create(
-    title: 'Rise Grand Rapids // Brick & Mortar Shop',
-    website: 'www.grandrapids.com',
-    description: "From home baking to a church kitchen, pop ups to wholesalers, Rise is on the move and we need your help to open a brick & mortar shop!",
-    end_date: '07/18/2017',
-    funding_goal:  55000 ,
-    details: "Rise Grand Rapids is a gluten free, vegan, and soy free bakery based in Grand Rapids, MI. We believe that everyone should be able to partake
-      in life's greatest celebrations without worrying about their dietary restrictions or preferences. Here at Rise, we know what it feels like to be left
-      out during a birthday party or family event, but we are here to tell you: come as you are, have a seat at the table. Rise began in a one bedroom apartment
-      on the Westside of Grand Rapids four years ago. At first, we baked for neighborhood potlucks and friends' weddings, but our business quickly grew and soon
-      we were invited to local pop-up sales. At these pop-ups, we debuted our allergy-conscious baked goods which were sold out in a matter of minutes. The demand
-      for our product grew, and in April of 2016 we starting producing our baked goods in our church's commercial kitchen. Baking in a commercial kitchen allowed
-      for our baked goods to be sold at restaurants and coffee shops in downtown Grand Rapids. Since then, we have accumulated nine wholesale vendors where our
-      customers can buy our baked goods. We fulfill small custom orders for events such as birthday parties and baby showers, as well as larger custom orders
-      for special occasions such as weddings or corporate events. The retail side of our business has been fantastic but also challenging, seeing as though we
-      don't have our own retail storefront. ",
-    creator_id: user6.id,
-    category_id: food.id,
-    project_img: "https://bsnscb.com/data/out/68/38899796-fantastic-donut-wallpapers.jpg")
+# p8 = Project.create(
+#     title: 'Rise Grand Rapids // Brick & Mortar Shop',
+#     website: 'www.grandrapids.com',
+#     description: "From home baking to a church kitchen, pop ups to wholesalers, Rise is on the move and we need your help to open a brick & mortar shop!",
+#     end_date: '07/18/2017',
+#     funding_goal:  55000 ,
+#     details: "Rise Grand Rapids is a gluten free, vegan, and soy free bakery based in Grand Rapids, MI. We believe that everyone should be able to partake
+#       in life's greatest celebrations without worrying about their dietary restrictions or preferences. Here at Rise, we know what it feels like to be left
+#       out during a birthday party or family event, but we are here to tell you: come as you are, have a seat at the table. Rise began in a one bedroom apartment
+#       on the Westside of Grand Rapids four years ago. At first, we baked for neighborhood potlucks and friends' weddings, but our business quickly grew and soon
+#       we were invited to local pop-up sales. At these pop-ups, we debuted our allergy-conscious baked goods which were sold out in a matter of minutes. The demand
+#       for our product grew, and in April of 2016 we starting producing our baked goods in our church's commercial kitchen. Baking in a commercial kitchen allowed
+#       for our baked goods to be sold at restaurants and coffee shops in downtown Grand Rapids. Since then, we have accumulated nine wholesale vendors where our
+#       customers can buy our baked goods. We fulfill small custom orders for events such as birthday parties and baby showers, as well as larger custom orders
+#       for special occasions such as weddings or corporate events. The retail side of our business has been fantastic but also challenging, seeing as though we
+#       don't have our own retail storefront. ",
+#     creator_id: user6.id,
+#     category_id: food.id,
+#     project_img: "https://bsnscb.com/data/out/68/38899796-fantastic-donut-wallpapers.jpg")
 
 p9 = Project.create(
     title: 'Hedges n highways by Official Godson',
@@ -197,6 +197,57 @@ p10 = Project.create(
     creator_id: user4.id,
     category_id: photography.id,
     project_img: "https://camy.premiumcoding.com/wp-content/uploads/2012/03/old-school-camera.jpg")
+
+p8 = Project.create(
+    title: "Camera kit",
+    website: 'www.coldgfess.com',
+    description: "Put down your phone and reconnect with the physical experience of analogue photography with the VIDERE 35mm pinhole camera kit!",
+    end_date: '07/08/2017',
+    funding_goal: 15000,
+    details: "A pinhole camera is a simple camera that uses a single small aperture - a pinhole - instead of a lens. Dating back to the 1880s,
+        the simple and ingenious process of pinhole photography involves exposure of film using light filtered through a small hole in a
+        light-proof box. light passes through this hole, an image is exposed onto the film loaded inside the camera. Exposure times are
+        typically longer than with a normal lensed camera, due to the aperture being so much smaller. This means that pinhole cameras can
+        typically take anywhere from a few seconds to a couple of hours to expose a photograph. Because of these long exposures the shutter
+        is usually manually operated. It strips complex photographic concepts down to their basic foundation: Light. How much to let in,
+        and for how long!",
+    creator_id: user4.id,
+    category_id: photography.id,
+    project_img: "https://www.pexels.com/assets/pexels-stock-photos-b3d10c31f607f9971c55287b4518b7374d8f82fee1246c1baba546d922688265.png")
+
+# p12 = Project.create(
+#     title: "crankstarter Gold: VIDERE 35mm DIY pinhole camera kit",
+#     website: 'www.coldgess.com',
+#     description: "Put down your phone and reconnect with the physical experience of analogue photography with the VIDERE 35mm pinhole camera kit!",
+#     end_date: '07/08/2017',
+#     funding_goal: 15000  ,
+#     details: "A pinhole camera is a simple camera that uses a single small aperture - a pinhole - instead of a lens. Dating back to the 1880s,
+#         the simple and ingenious process of pinhole photography involves exposure of film using light filtered through a small hole in a
+#         light-proof box. light passes through this hole, an image is exposed onto the film loaded inside the camera. Exposure times are
+#         typically longer than with a normal lensed camera, due to the aperture being so much smaller. This means that pinhole cameras can
+#         typically take anywhere from a few seconds to a couple of hours to expose a photograph. Because of these long exposures the shutter
+#         is usually manually operated. It strips complex photographic concepts down to their basic foundation: Light. How much to let in,
+#         and for how long!",
+#     creator_id: user4.id,
+#     category_id: photography.id,
+#     project_img: "https://camy.premiumcoding.com/wp-content/uploads/2012/03/old-school-camera.jpg")
+
+# p13 = Project.create(
+#     title: "crankstarter Gold: VIDERE 35mm DIY pinhole camera kit",
+#     website: 'www.coldgess.com',
+#     description: "Put down your phone and reconnect with the physical experience of analogue photography with the VIDERE 35mm pinhole camera kit!",
+#     end_date: '07/08/2017',
+#     funding_goal: 15000  ,
+#     details: "A pinhole camera is a simple camera that uses a single small aperture - a pinhole - instead of a lens. Dating back to the 1880s,
+#         the simple and ingenious process of pinhole photography involves exposure of film using light filtered through a small hole in a
+#         light-proof box. light passes through this hole, an image is exposed onto the film loaded inside the camera. Exposure times are
+#         typically longer than with a normal lensed camera, due to the aperture being so much smaller. This means that pinhole cameras can
+#         typically take anywhere from a few seconds to a couple of hours to expose a photograph. Because of these long exposures the shutter
+#         is usually manually operated. It strips complex photographic concepts down to their basic foundation: Light. How much to let in,
+#         and for how long!",
+#     creator_id: user4.id,
+#     category_id: photography.id,
+#     project_img: "https://camy.premiumcoding.com/wp-content/uploads/2012/03/old-school-camera.jpg")
 
 
 Reward.destroy_all
