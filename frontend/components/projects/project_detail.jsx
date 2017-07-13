@@ -122,7 +122,7 @@ class ProjectDetail extends React.Component {
           <div className="show-background-stat-user">
             <div className="detail-user-title">
             <div className="detail-user">
-              <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497820642/Stock/avatar_nqzvi4.png"
+              <img src={ window.img.avatar }
                 alt="User icon" className="user-icon-detail" />
               <p className="detail-user-name">
                 By <span>{project.creator}</span>
