@@ -15,7 +15,7 @@ const nukaCarousel = () => (
       <h1>Man's Debut Music Videos</h1>
       <h2>Lead your prehistoric Tribe to victory through discovery, achievements and civilization</h2>
       <a href="#/projects/4"><button>View project</button></a>
-      <img src="http://t.wallpaperweb.org/wallpaper/nature/1920x1080/ps3_hq_image_3451920x1080.jpg" />
+      <img src="https://www.hdwallpapers.in/walls/hq_japan_nature_rain_fall-wide.jpg" />
     </div>
 
     <div className="project-carousel-slide">
@@ -24,7 +24,7 @@ const nukaCarousel = () => (
       <a href="#/projects/9" className="view-proj-button"><button>View project</button></a>
       <img src="https://s3.amazonaws.com/crankstarter-dev/projects/project_imgs/000/000/009/original/old-school-camera.jpg?1498830938" />
     </div>
-
+    
   </Carousel>
 );
 
