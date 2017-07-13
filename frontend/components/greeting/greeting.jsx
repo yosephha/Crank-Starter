@@ -10,7 +10,8 @@ const sessionLinks = (clearErrors) => (
 
 const personalGreeting = (currentUser, logout) => (
   <div className="dropdown">
-    <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497820642/Stock/avatar_nqzvi4.png"
+    {/* <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497820642/Stock/avatar_nqzvi4.png" */}
+    <img src={ window.img.avatar }
       alt="User icon" className="dropbtn" />
 
     <div className="dropdown-content">

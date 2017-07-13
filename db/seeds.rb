@@ -160,7 +160,7 @@ p8 = Project.create(
       don't have our own retail storefront. ",
     creator_id: user6.id,
     category_id: food.id,
-    project_img: "http://bsnscb.com/data/out/68/38899796-fantastic-donut-wallpapers.jpg")
+    project_img: "https://bsnscb.com/data/out/68/38899796-fantastic-donut-wallpapers.jpg")
 
 p9 = Project.create(
     title: 'Hedges n highways by Official Godson',
@@ -196,7 +196,7 @@ p10 = Project.create(
         and for how long!",
     creator_id: user4.id,
     category_id: photography.id,
-    project_img: "http://camy.premiumcoding.com/wp-content/uploads/2012/03/old-school-camera.jpg")
+    project_img: "https://camy.premiumcoding.com/wp-content/uploads/2012/03/old-school-camera.jpg")
 
 
 Reward.destroy_all
