@@ -66,17 +66,12 @@ this.state = ({
 ```
 
 ### Contribution
-Contribution goes to a rewards index page where users can choose a reward with a minimum amount value. The app performs a check to see if the amount entered by user is greater or equal to reward amount.
+Contribution lists all rewards with their associated value. users can make contributions based on values of the rewards. The app performs a check to see if the amount entered by user is greater or equal to reward amount.
 
 ![Contribution][contribution]
 ### Categories
 Explore tab is a list of all the available categories.
 
-```Ruby
-def index
-  @categories = Category.all
-end
-```
 when a user makes a selection, a request is made to the controller. the controller then replies with projects that belong to the chosen category.
 
 ```Ruby
