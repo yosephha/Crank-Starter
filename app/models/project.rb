@@ -25,13 +25,15 @@ class Project < ApplicationRecord
   validates :title, uniqueness: { scope: :creator_id }
   validates :funding_goal, numericality: true
 
-
   has_attached_file :project_img, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "tiger.jpg"
   validates_attachment_content_type :project_img, content_type: /\Aimage\/.*\z/
 
   belongs_to :creator, foreign_key: :creator_id, class_name: :User
   belongs_to :category, foreign_key: :category_id, class_name: :Category
 
-  has_many :rewards, dependent: :destroy
+  has_many :rewards, inverse_of: :project
+
   has_many :contributions, through: :rewards, source: :contributions
+
+  accepts_nested_attributes_for :rewards
 end

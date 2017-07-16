@@ -23,7 +23,7 @@ class ProjectForm extends React.Component{
       funding_goal: 0,
       project_img_file: null,
       project_img_url: null,
-      reward: [{
+      rewards: [{
          title: "",
          description: "",
          amount: 0
@@ -32,7 +32,7 @@ class ProjectForm extends React.Component{
     this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
-    this.reward = this.reward.bind(this);
+    this.rewards = this.rewards.bind(this);
     this.addReward = this.addReward.bind(this);
   }
 
@@ -77,7 +77,7 @@ class ProjectForm extends React.Component{
     formData.append("project[category_id]", category[this.state.category]);
     formData.append("project[funding_goal]", this.state.funding_goal);
     formData.append("project[project_img]", this.state.project_img_file);
-    formData.append("project[reward]", JSON.stringify(this.state.reward));
+    formData.append("project[rewards_attributes]", JSON.stringify(this.state.rewards));
 
     this.props.createProject(formData)
     .then((resp) =>  (this.props.history.push(`/projects/${resp.project.id}`))
@@ -86,34 +86,34 @@ class ProjectForm extends React.Component{
   }
 
   setAmount(index,e){
-    this.state.reward[index].amount=e.target.value;
+    this.state.rewards[index].amount=e.target.value;
   }
 
   setTitle(index,e){
-    this.state.reward[index].title=e.target.value;
+    this.state.rewards[index].title=e.target.value;
   }
 
   setReward(index,e){
-    this.state.reward[index].description=e.target.value;
+    this.state.rewards[index].description=e.target.value;
   }
 
   addReward(e){
     e.preventDefault();
     e.stopPropagation();
 
-    let rewards = this.state.reward;
+    let rewards = this.state.rewards;
     rewards.push({
       title: "",
       description: "",
       amount: 0
     });
 
-    this.setState({reward: rewards});
+    this.setState({rewards: rewards});
   }
 
-  reward() {
+  rewards() {
     return (
-      this.state.reward.map((rewards, index) => {
+      this.state.rewards.map((rewards, index) => {
         return(
           <div key={index} className="project-description-form reward-form-toggle">
           <p className="input-label-description">Reward {index+1}</p>
@@ -202,7 +202,7 @@ class ProjectForm extends React.Component{
                }
               <br />
                 <div className="wrapper reward-form-toggle">
-                  {this.reward()}
+                  {this.rewards()}
                   <button className="addReward-button"onClick={this.addReward}>Add Reward</button>
                 </div>
               <br />
