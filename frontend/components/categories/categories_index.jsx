@@ -27,5 +27,4 @@ class CategoriesIndex extends React.Component {
     }
  }
 
-
 export default CategoriesIndex;
