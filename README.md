@@ -1,6 +1,6 @@
 # Crankstarter
 
-[Heroku link][heroku]
+[Crankstarter live][heroku]
 
 
 Crank Starter is a single page web application inspired by Kick Starter, a crowd-funding web application, built using Ruby on Rails and React/Redux.
@@ -90,7 +90,7 @@ The search input field has an onChange listener that enables it to have a live s
 
 ![Clickstarter index][giphy]
 
-The search controller sends matching result based on title 
+The search controller sends matching result based on title
 ```Ruby
 def index
   @projects = Project.where('lower(title) Like ?', "%#{params[:data].downcase}%")
