@@ -17,9 +17,9 @@ Crank Starter is a single page web application inspired by Kick Starter, a crowd
 ## Implementation
 
 ### User Authentication
-Uses BCrypt to to hash and salt users passwords and stores the digest
-Enables users to maintain their session unless they explicitly logout
-Requires users to be logged in to start a project and make contributions. achieves this using protected routes
+Uses BCrypt to to hash and salt users passwords and stores the digest. It enables users to maintain their session unless they explicitly logout.
+
+One of the features of Crankstarter is to require users to be logged in order to start a project and make contributions. This feature is achieved using protected routes
 
 ```javascript
   const Protected = ({ component: Component, path, loggedIn }) => (
