@@ -57,7 +57,6 @@ class ProjectForm extends React.Component{
 
       )));
 
-      debugger
       let FilledState = merge({}, this.state);
 
       FilledState.title = newProps.project.title;
@@ -70,7 +69,6 @@ class ProjectForm extends React.Component{
       FilledState.project_img_url = newProps.project.project_img;
       FilledState.rewards = rewards;
 
-      debugger
       this.setState(FilledState);
     }
   }
@@ -118,7 +116,6 @@ class ProjectForm extends React.Component{
     formData.append("project[rewards_attributes]", JSON.stringify(this.state.rewards));
 
     if(this.props.project){
-      debugger
       this.props.updateProject(this.props.project.id, formData)
       .then( resp =>  (
         this.props.history.push(`/projects/${resp.project.id}`)
@@ -159,7 +156,6 @@ class ProjectForm extends React.Component{
   rewards() {
     return (
       this.state.rewards.map((rewards, index) => {
-        debugger
         return(
           <div key={index} className="project-description-form reward-form-toggle">
           <p className="input-label-description">Reward {index+1}</p>

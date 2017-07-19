@@ -32,7 +32,6 @@ export const deleteProject = project => (
 );
 
 export const updateProject = (id, project) => {
-  debugger
   return (
     $.ajax({
       method: 'PATCH',

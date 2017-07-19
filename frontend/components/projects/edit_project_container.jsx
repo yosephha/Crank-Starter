@@ -4,7 +4,6 @@ import { updateProject, fetchProject } from '../../actions/project_actions';
 import { fetchCategories } from '../../actions/category_action';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const project = state.projects[ownProps.match.params.id];
   const rewards = project.rewards
 
