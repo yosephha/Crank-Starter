@@ -38,12 +38,9 @@ export const fetchProjects = () => dispatch => (
   .then((projects) => dispatch(reciveProjects(projects)))
 );
 
-export const updateProject = project => dispatch => (
-  APIUtil.updateProject(project)
-    .then(res => {
-      dispatch(receiveProjectDetail(res));
-      return res;
-    }).fail(err => dispatch(receiveProjectErrors(err.responseJSON)))
+export const updateProject = (id, project) => dispatch => (
+  APIUtil.updateProject(id, project)
+    .then(res => dispatch(reciveProjectDetail(res)))
 );
 
 export const deleteProject = project => dispatch => {

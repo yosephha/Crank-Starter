@@ -35,5 +35,17 @@ class Project < ApplicationRecord
 
   has_many :contributions, through: :rewards, source: :contributions
 
+  def funded
+    rewards.map do |reward|
+       reward.total_contributions
+    end.reduce(:+)
+  end
+
+  def num_backers
+    rewards.map do |reward|
+      reward.contribution_count
+    end.reduce(:+)
+  end
+
   accepts_nested_attributes_for :rewards
 end

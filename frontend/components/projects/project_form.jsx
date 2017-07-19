@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { merge, values } from 'lodash';
 import {
   inputImg,
   inputBox,
@@ -38,6 +39,40 @@ class ProjectForm extends React.Component{
 
   componentDidMount(){
     this.props.fetchCategories();
+    if(this.props.project){
+      this.props.fetchProject(this.props.match.params.id);
+    }
+  }
+
+  componentWillReceiveProps(newProps){
+    if(this.props.project !== newProps.project){
+      // const FilledState = {};
+
+      let rewards = newProps.project.rewards.map((reward => (
+        {
+          title: reward.title,
+          description: reward.description,
+          amount: reward.amount
+        }
+
+      )));
+
+      debugger
+      let FilledState = merge({}, this.state);
+
+      FilledState.title = newProps.project.title;
+      FilledState.description = newProps.project.description;
+      FilledState.details = newProps.project.details;
+      FilledState.website = newProps.project.website;
+      FilledState.end_date = newProps.project.end_date;
+      FilledState.category = newProps.project.category.name;
+      FilledState.funding_goal = newProps.project.funding_goal;
+      FilledState.project_img_url = newProps.project.project_img;
+      FilledState.rewards = rewards;
+
+      debugger
+      this.setState(FilledState);
+    }
   }
 
   update(property) {
@@ -69,6 +104,10 @@ class ProjectForm extends React.Component{
     var formData = new FormData();
     const category = this.swap_cat(this.props.categories);
 
+    if(this.state.project_img_file){
+      formData.append("project[project_img]", this.state.project_img_file);
+    }
+
     formData.append("project[title]", this.state.title);
     formData.append("project[description]", this.state.description);
     formData.append("project[details]", this.state.details);
@@ -76,12 +115,18 @@ class ProjectForm extends React.Component{
     formData.append("project[end_date]", this.state.end_date);
     formData.append("project[category_id]", category[this.state.category]);
     formData.append("project[funding_goal]", this.state.funding_goal);
-    formData.append("project[project_img]", this.state.project_img_file);
     formData.append("project[rewards_attributes]", JSON.stringify(this.state.rewards));
 
-    this.props.createProject(formData)
-    .then((resp) =>  (this.props.history.push(`/projects/${resp.project.id}`))
-  );
+    if(this.props.project){
+      debugger
+      this.props.updateProject(this.props.project.id, formData)
+      .then( resp =>  (
+        this.props.history.push(`/projects/${resp.project.id}`)
+      ));
+    } else {
+      this.props.createProject(formData)
+      .then((resp) =>  (this.props.history.push(`/projects/${resp.project.id}`)));
+    }
 
   }
 
@@ -114,6 +159,7 @@ class ProjectForm extends React.Component{
   rewards() {
     return (
       this.state.rewards.map((rewards, index) => {
+        debugger
         return(
           <div key={index} className="project-description-form reward-form-toggle">
           <p className="input-label-description">Reward {index+1}</p>
@@ -122,15 +168,25 @@ class ProjectForm extends React.Component{
             <ul>
               <li>
                 <span>Title</span>
-                <input type="text" onChange={this.setTitle.bind(this,index)}/>
+                <input type="text"
+                  onChange={this.setTitle.bind(this,index)}
+                  placeholder={rewards.title}
+                />
+
               </li>
               <li>
                 <span>Amount</span>
-                <input type="number" onChange={this.setAmount.bind(this,index)}/>
+                <input type="number"
+                  onChange={this.setAmount.bind(this,index)}
+                  placeholder={rewards.amount}
+                  />
               </li>
               <li>
                 <span>Description</span>
-                <textarea onChange={this.setReward.bind(this,index)}></textarea>
+                <textarea
+                  onChange={this.setReward.bind(this,index)}
+                  placeholder={rewards.description}
+                ></textarea>
               </li>
             </ul>
           </div>

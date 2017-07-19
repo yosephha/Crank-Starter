@@ -19,4 +19,12 @@ class Reward < ApplicationRecord
 
   has_many :contributions
   has_many :backers, through: :contributions, source: :backer
+
+  def total_contributions
+    contributions.reduce(0){ |acc, cont| acc + cont.amount }
+  end
+
+  def contribution_count
+    contributions.map{ |e| e.backer_id }.uniq.count
+  end
 end

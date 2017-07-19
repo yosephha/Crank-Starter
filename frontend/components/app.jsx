@@ -10,6 +10,8 @@ import NavBar from './nav_bar/nav_bar_container';
 import PostIndexContainer from './projects/project_index_container';
 import PostIndex from './projects/project_index';
 
+import EditFormContainer from './projects/edit_project_container';
+
 import NewProjectFormContainer from './projects/project_form_container';
 import ProjectDetailContainer from './projects/project_detail_container';
 import ProjectDetail from './projects/project_detail';
@@ -34,6 +36,12 @@ const App = () => (
          exact path="/projects/new"
          component={NewProjectFormContainer}
       />
+
+      <ProtectedRoute
+         exact path="/projects/edit/:id"
+         component={EditFormContainer}
+      />
+
       <ProtectedRoute
         exact path="/projects/:id/contribution"
         component={ContributionIndexContainer}
@@ -44,6 +52,7 @@ const App = () => (
       <Route exact path="/categories/:id" component={CategoriesIndexContainer} />
       <Route exact path="/projects/:id" component={ProjectDetailContainer} />
       <Route exact path="/search" component={SearchContainer} />
+
     </div>
   </div>
 );

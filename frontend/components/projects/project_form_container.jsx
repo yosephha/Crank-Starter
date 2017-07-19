@@ -1,7 +1,7 @@
 import ProjectForm from './project_form';
 import { connect } from 'react-redux';
 import { createProject } from '../../actions/project_actions';
-import { fetchCategories } from '../../actions/category_action'
+import { fetchCategories } from '../../actions/category_action';
 
 const mapStateToProps = (state) => {
   return ({

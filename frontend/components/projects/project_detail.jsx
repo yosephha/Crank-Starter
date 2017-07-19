@@ -47,7 +47,7 @@ class ProjectDetail extends React.Component {
     if (this.props.currentUser && detailId === this.props.currentUser.id) {
       return(
         <span className="userButtons">
-          <Link to={`/projects/new`}>
+          <Link to={`/projects/edit/${this.props.project.id}`}>
             <button className="show-edit-button">
               <i className="fa fa-pencil-square-o" aria-hidden="true">Edit</i>
             </button>
