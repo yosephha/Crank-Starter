@@ -5,7 +5,7 @@
 // Title and username
 .detail-user-title {
   display: flex;
-  width: 100%;
+  width: 75%;
   margin: auto;
   justify-content: center;
 }
@@ -49,6 +49,7 @@ p#display-title {
   display: block;
   width: 100%;
   height: auto;
+  margin: auto;
 }
 
 .detail-project-img{
@@ -67,8 +68,11 @@ detail-user {
 
 .detail-img-stats{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
+  box-sizing: content-box;
 }
 
 .detail-stats {
