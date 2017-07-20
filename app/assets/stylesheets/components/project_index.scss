@@ -4,6 +4,22 @@
   padding: 41px;
   width: 70%;
   margin: auto;
+  justify-content: center;
+}
+
+.index-title{
+  width: 70%;
+  margin: auto;
+  padding-top: 70px;
+  text-align: -webkit-center;
+}
+
+.index-title > span {
+    margin: 20px;
+    color: #353535;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: Helvetica;
 }
 
 .all-projects{

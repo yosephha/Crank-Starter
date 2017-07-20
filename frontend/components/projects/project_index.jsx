@@ -28,6 +28,7 @@ class ProjectIndex extends React.Component {
     return (
       <section className ="all-projects">
         <Carousel />
+        <div className="index-title"><span>Recommended for you</span></div>
         <ul className="indexContainer">
           {projects}
         </ul>
