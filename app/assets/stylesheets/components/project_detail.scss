@@ -59,6 +59,8 @@ p#display-title {
   padding: 0 63px;
   padding-bottom: 20px;
 }
+
+
 detail-user {
   border: 1px solid green;
   width: 599px;
@@ -204,4 +206,29 @@ svg.rc-progress-line.stats-bar-show {
   width: 40px;
   border-radius: 100%;
   z-index: 1;
+}
+
+@media screen and (max-width:1405px) {
+  .detail-img-stats{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 94%;
+    margin: auto;
+    box-sizing: content-box;
+  }
+
+  .detail-project-img {
+    display: block;
+    width: 605px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .detail-user-title {
+      display: flex;
+      width: 91%;
+      margin: auto;
+      justify-content: center;
+  }
 }

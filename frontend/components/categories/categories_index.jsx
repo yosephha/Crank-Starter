@@ -7,7 +7,7 @@ class CategoriesIndex extends React.Component {
   }
 
   render(){
-    if(!this.props.projects) return null;
+    if(!this.project) return null;
 
     const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
 
