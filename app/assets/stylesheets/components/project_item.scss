@@ -99,14 +99,16 @@
 }
 
 .project-description {
-    color: #6b5b5b;
-    font-size: 18px;
+  color: #95959E;
+  font-size: 18px;
+  font-weight: 100;
 }
 
 .author{
-  color: gray;
+  color: #95959E;
   font-size: 16px;
   margin: 18px 0;
+  font-weight: 100;
 }
 
 .pledged {
@@ -114,13 +116,14 @@
   color: #4c4949;
 }
 .stat-txt {
-  color: #908b8b;
+  color: #95959E;
+  font-weight: 200;
 }
 
 .author span{
   color: black;
   font-size: 19px;
-  font-family: sans-serif;
+  font-weight: 400;
 }
 
 .pledged, .funded, .remaining {
