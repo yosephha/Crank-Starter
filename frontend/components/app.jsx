@@ -23,6 +23,8 @@ import CategoriesIndexContainer from './categories/categories_index_container';
 
 import SearchContainer from './search/searchContainer';
 
+import Footer from './footer';
+
 const App = () => (
   <div>
     <header className="header">
@@ -53,6 +55,7 @@ const App = () => (
       <Route exact path="/projects/:id" component={ProjectDetailContainer} />
       <Route exact path="/search" component={SearchContainer} />
 
+      <Footer />
     </div>
   </div>
 );
