@@ -1,5 +1,6 @@
 import React from 'react';
 import ContributionFormContainer from './contribution_form_container';
+import Footer from '../../footer';
 
 class ContributionIndex extends React.Component {
   constructor(props){
@@ -34,6 +35,7 @@ class ContributionIndex extends React.Component {
           <h2 className="support-this">Support this project</h2>
           {rewards}
         </div>
+        <Footer />
       </div>
     );
   }

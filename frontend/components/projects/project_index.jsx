@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectItem from './project_item';
 import Carousel from './carousel.jsx';
+import Footer from '../footer';
 
 class ProjectIndex extends React.Component {
   componentDidMount(){
@@ -32,6 +33,7 @@ class ProjectIndex extends React.Component {
         <ul className="indexContainer">
           {projects}
         </ul>
+        <Footer />
       </section>
     );
   }

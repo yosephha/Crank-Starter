@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectItem from '../projects/project_item';
 import { NavLink } from 'react-router-dom';
+import Footer from '../footer';
 
 class Search extends React.Component {
   constructor(props){
@@ -74,8 +75,9 @@ class Search extends React.Component {
         </div>
 
         <div className="indexContainer">
-          {projects}
+          {projects.length ? projects : 'Oops! Looks like we couldn’t find any results...'}
         </div>
+        <Footer />
       </div>
 
     );

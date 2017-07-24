@@ -54,8 +54,6 @@ const App = () => (
       <Route exact path="/categories/:id" component={CategoriesIndexContainer} />
       <Route exact path="/projects/:id" component={ProjectDetailContainer} />
       <Route exact path="/search" component={SearchContainer} />
-
-      <Footer />
     </div>
   </div>
 );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { merge, values } from 'lodash';
+import Footer from '../footer';
 import {
   inputImg,
   inputBox,
