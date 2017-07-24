@@ -1,0 +1,30 @@
+.footer-container{
+  background: #020621;
+}
+
+.inner-footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+.inner-footer-container > ul{
+  display: flex;
+}
+
+.inner-footer-container > ul > li{
+  color: white;
+  padding: 20px;
+  font-size: 34px;
+}
+
+.footer-logo{
+  color: white;
+}
+
+.cpr-txt{
+  color: white;
+  padding: 0 10px;
+  font-size: 10px;
+}
