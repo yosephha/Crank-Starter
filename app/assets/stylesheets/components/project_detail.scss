@@ -71,7 +71,6 @@ detail-user {
 .detail-img-stats{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 75%;
   margin: auto;
   box-sizing: content-box;
@@ -170,7 +169,6 @@ detail-user {
   padding: 0 20px;
   display: flex;
   justify-content: space-around;
-  // width: 1000px;
   width: 85%;
   margin: auto;
   margin-top: 70px;
@@ -213,7 +211,6 @@ svg.rc-progress-line.stats-bar-show {
   .detail-img-stats{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: 94%;
     margin: auto;
     box-sizing: content-box;
