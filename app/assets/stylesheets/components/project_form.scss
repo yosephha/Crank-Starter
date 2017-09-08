@@ -73,11 +73,16 @@ ul {
 list-style-type: none;
 }
 
-// input[type="text"]{
 .form-container input[type="text"] {
   width: 390px;
   border-radius: 9px;
 }
+
+.form-container input[type="number"] {
+  width: 390px;
+  border-radius: 9px;
+}
+
 .rand-txt{
   color: red;
 

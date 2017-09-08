@@ -1,5 +1,6 @@
 import React from 'react';
 import ContributionFormContainer from './contribution_form_container';
+import Footer from '../../footer';
 
 class ContributionIndex extends React.Component {
   constructor(props){
@@ -11,19 +12,17 @@ class ContributionIndex extends React.Component {
   }
 
   render(){
-    if (!this.props.project) {
-      return null;
-    } else {
-
+    if (!this.props.project) return null;
 
     const project = this.props.project;
     const userName = this.props.currentUser.username;
-
-    const rewards = project.rewards.map((reward) => {
-      return (
-        <ContributionFormContainer key={reward.id} reward={reward} project={project} />
-      )
-    });
+    const rewards = project.rewards.map((reward) => (
+      <ContributionFormContainer
+        key={reward.id}
+        reward={reward}
+        project={project}
+      />
+    ));
 
     return (
       <div className="contribution-index-container">
@@ -36,9 +35,9 @@ class ContributionIndex extends React.Component {
           <h2 className="support-this">Support this project</h2>
           {rewards}
         </div>
+        <Footer />
       </div>
     );
-  }
   }
 };
 

@@ -16,6 +16,8 @@
 
 body{
   background: #f4f5f6;
+  font-family: Helvetica;
+  color: #353535;
 }
 button, input[type=submit]{
   cursor: pointer;

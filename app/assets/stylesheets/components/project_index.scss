@@ -4,6 +4,21 @@
   padding: 41px;
   width: 70%;
   margin: auto;
+  justify-content: center;
+}
+
+.index-title{
+  width: 70%;
+  margin: auto;
+  padding-top: 70px;
+  text-align: -webkit-center;
+}
+
+.index-title > span {
+    margin: 20px;
+    color: #353535;
+    font-weight: 400;
+    font-size: 25px;
 }
 
 .all-projects{
@@ -30,9 +45,9 @@
   width: 100%;
   text-align: -webkit-center;
   color: white;
-  font-size: 70px;
-  font-family: serif;
+  font-size: 60px;
   z-index: 2;
+  font-weight: 200;
 }
 
 .project-carousel-slide h2 {

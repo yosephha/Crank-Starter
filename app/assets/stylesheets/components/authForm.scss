@@ -65,11 +65,11 @@ form{
 }
 
 .separator-text {
-  font-family: serif;
+  font-family: Helvetica;
   font-size: 20px;
 }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=number]{
   width: 80%;
   padding: 11px 25px;
   background: white;

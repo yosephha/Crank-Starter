@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectItem from '../projects/project_item';
 import { NavLink } from 'react-router-dom';
+import Footer from '../footer';
 
 class Search extends React.Component {
   constructor(props){
@@ -19,10 +20,10 @@ class Search extends React.Component {
     this.props.fetchCategories();
   }
 
-  update(field) {
+  update() {
     return e => this.setState({
-      [field]: e.currentTarget.value,
-      'projects': this.filterByTitle(this.state["searchRes"])
+      'searchRes': e.currentTarget.value,
+      'projects': this.filterByTitle(e.currentTarget.value)
     });
   }
 
@@ -33,7 +34,8 @@ class Search extends React.Component {
 
   filterByTitle(title){
     const filtered = this.props.projects.filter((project) => {
-      if (project.title.toLowerCase().includes(title.toLowerCase())) {
+      let p_title = project.title.toLowerCase().replace(/\s/g, '');
+      if (p_title.includes(title.toLowerCase().replace(/\s/g, ''))) {
         return project;
       }
     });
@@ -61,7 +63,7 @@ class Search extends React.Component {
 
             <input type="text"
               value={this.state.username}
-              onChange={this.update("searchRes")}
+              onChange={this.update()}
               placeholder="Search"
               autoFocus={true}
             />
@@ -73,8 +75,9 @@ class Search extends React.Component {
         </div>
 
         <div className="indexContainer">
-          {projects}
+          {projects.length ? projects : 'Oops! Looks like we couldn’t find any results...'}
         </div>
+        <Footer />
       </div>
 
     );

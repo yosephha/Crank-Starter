@@ -31,10 +31,14 @@ export const deleteProject = project => (
   })
 );
 
-export const updateProject = project => (
-  $.ajax({
-    method: 'PATCH',
-    url: `/api/projects/${project.id}`,
-    data: { project }
-  })
-);
+export const updateProject = (id, project) => {
+  return (
+    $.ajax({
+      method: 'PATCH',
+      url: `/api/projects/${id}`,
+      data: project,
+      contentType: false,
+      processData: false
+    })
+  );
+};

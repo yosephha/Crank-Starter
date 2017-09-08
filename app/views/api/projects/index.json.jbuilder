@@ -11,21 +11,16 @@
     json.end_date project.end_date
     json.funding_goal project.funding_goal
     json.project_img asset_path(project.project_img.url)
-    json.funded project.rewards.map { |reward|
-       reward.contributions.reduce(0){|acc, cont| acc + cont.amount}
-    }.reduce(:+)
-    json.num_backers project.rewards.map { |reward|
-       reward.contributions.map{|e| e.backer_id}.uniq.count
-    }.reduce(:+)
+    json.funded project.funded
+    json.num_backers project.num_backers
     json.rewards project.rewards do |reward|
       json.id reward.id
       json.title reward.title
       json.amount reward.amount
       json.description reward.description
       json.contributions reward.contributions
-      json.backers reward.backers
-      json.project reward.project
+      # json.backers reward.backers
+      # json.project reward.project
     end
-
   end
 end

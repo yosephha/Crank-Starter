@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectItem from './project_item';
 import Carousel from './carousel.jsx';
+import Footer from '../footer';
 
 class ProjectIndex extends React.Component {
   componentDidMount(){
@@ -28,9 +29,11 @@ class ProjectIndex extends React.Component {
     return (
       <section className ="all-projects">
         <Carousel />
+        <div className="index-title"><span>Recommended for you</span></div>
         <ul className="indexContainer">
           {projects}
         </ul>
+        <Footer />
       </section>
     );
   }

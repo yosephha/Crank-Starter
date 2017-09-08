@@ -47,7 +47,7 @@ class ProjectDetail extends React.Component {
     if (this.props.currentUser && detailId === this.props.currentUser.id) {
       return(
         <span className="userButtons">
-          <Link to={`/projects/new`}>
+          <Link to={`/projects/edit/${this.props.project.id}`}>
             <button className="show-edit-button">
               <i className="fa fa-pencil-square-o" aria-hidden="true">Edit</i>
             </button>
@@ -122,7 +122,7 @@ class ProjectDetail extends React.Component {
           <div className="show-background-stat-user">
             <div className="detail-user-title">
             <div className="detail-user">
-              <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497820642/Stock/avatar_nqzvi4.png"
+              <img src={ window.img.avatar }
                 alt="User icon" className="user-icon-detail" />
               <p className="detail-user-name">
                 By <span>{project.creator}</span>
