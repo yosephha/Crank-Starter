@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store}/>, root);
 
   //
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchProjects = fetchProjects;
-  window.fetchProject = fetchProject;
-  window.createProject = createProject;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+  // window.fetchProjects = fetchProjects;
+  // window.fetchProject = fetchProject;
+  // window.createProject = createProject;
   // window.login = login;
   // window.signup = signup;
   // window.logout = logout;
